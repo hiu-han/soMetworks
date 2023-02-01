@@ -1,0 +1,19 @@
+/*** COMMON ***/
+
+/*** MAIN ***/
+body {
+  hegiht: auto;
+}
+#wrap {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+#main {
+  max-width: 1048px;
+  margin: 0 auto;
+}
+.intro-page #main {
+  max-width: unset;
+}
