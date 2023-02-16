@@ -1,0 +1,71 @@
+/*** COMMON ***/
+:root {
+  --test-boxshadow: 0 0 10px tomato inset;
+
+  --font-s-normal: 16px;
+  --font-w-bold: 600;
+}
+
+/*** MAIN ***/
+body {
+  height: auto;
+}
+#wrap {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+#main {
+  width: 100%;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto;
+}
+.intro-page #main .wrapper {
+  max-width: unset;
+}
+
+/** MAIN -> intro **/
+.main-banner {
+  position: relative;
+  width: 100%;
+}
+
+.main-banner .banner__item {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  box-shadow: var(--test-boxshadow);
+}
+
+.banner__item .banner--subs {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-width: 1048px;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: var(--test-boxshadow);
+}
+.banner__item .banner__txt {
+  display: flex;
+  flex-direction: column;
+}
+.banner__item .banner__txt > * {
+  display: inline-block;
+}
+.banner__item .banner__txt .txt--strong {
+  margin-bottom: 6px;
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.06rem;
+}
+.banner__item .banner__txt .txt--regular {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}

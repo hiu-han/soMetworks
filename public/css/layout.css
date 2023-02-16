@@ -24,15 +24,18 @@ header {
 .logo .txt--strong,
 .logo .txt--regular {
   display: inline-block;
+  vertical-align: bottom;
 }
 .logo .txt--strong {
   font-size: 26px;
   font-weight: 900;
+  line-height: 32px;
 }
 .logo .txt--regular {
   margin-left: 4px;
   font-size: 18px;
   font-weight: 400;
+  line-height: 29px;
 }
 
 /** HEADER -> nav **/

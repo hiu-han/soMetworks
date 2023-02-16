@@ -5,3 +5,7 @@
   top: -99999px;
   left: 0;
 }
+
+strong {
+  font-weight: 700;
+}

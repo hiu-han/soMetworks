@@ -9,20 +9,33 @@
 
     <nav class="site-menu">
       <ul id="primary-menu" class="gnb__list">
-        <li id="menu--info" class="gnb__item">
+        <li class="gnb__item space-info">
           <a href="./spaceInfo.html">시설안내</a>
         </li>
-        <li id="menu--book" class="gnb__item">
+        <li class="gnb__item use-info">
+          <a href="./spaceInfo.html">이용안내</a>
+        </li>
+        <li class="gnb__item book">
           <a href="./spaceBook.html">예약하기</a>
         </li>
-        <li id="menu--check" class="gnb__item">
-          <a href="./bookCheck.html">예약확인</a>
-        </li>
-        <li id="menu--login" class="gnb__item nowOn">
+        <li class="gnb__item login nowOn">
           <a href="./login.html">로그인</a>
         </li>
-        <li id="menu--logout" class="gnb__item">
-          <a href="./index.html">로그아웃</a>
+        <li class="gnb__item user nowOn">
+          <p class="user__box">
+            <span class="user--icon"></span>
+          </p>
+          <ul class="user--menu__list">
+            <li class="user--menu__item history">
+              <a href="#">예약내역</a>
+            </li>
+            <li class="user--menu__item user-info">
+              <a href="#">회원정보</a>
+            </li>
+            <li class="user--menu__item logout">
+              <a href="#">로그아웃</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
