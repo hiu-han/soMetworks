@@ -19,6 +19,10 @@ body {
 }
 #main {
   width: 100%;
+  padding-top: 45px;
+}
+.intro-page #main {
+  padding-top: 0;
 }
 .wrapper {
   width: 100%;
@@ -82,3 +86,11 @@ body {
   line-height: 1.2;
   margin-bottom: 6px;
 }
+
+/** CONTENT -> common **/
+.page-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/** CONTENT -> space book page **/
