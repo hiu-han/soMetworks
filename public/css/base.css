@@ -1,6 +1,7 @@
 /*** COMMON ***/
 :root {
   --test-boxshadow: 0 0 10px tomato inset;
+  --test-background: lightgrey;
 
   --font-s-normal: 16px;
   --font-w-bold: 600;
@@ -41,10 +42,22 @@ body {
   box-shadow: var(--test-boxshadow);
 }
 
+.banner__item .banner--bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--test-background);
+}
+
 .banner__item .banner--subs {
   display: flex;
   flex-direction: column;
   align-content: center;
+  position: relative;
   max-width: 1048px;
   height: 100%;
   margin: 0 auto;
