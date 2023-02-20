@@ -9,3 +9,32 @@
 strong {
   font-weight: 700;
 }
+
+.accept-input {
+  display: block;
+  width: 100%;
+}
+.accept-item {
+  display: flex;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+  justify-content: left;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+.accept-item .input-item {
+  width: unset !important;
+}
+.accept-item:last-of-type {
+  margin-bottom: 0;
+}
+.accept-item .input-label {
+  font-size: 14px;
+  color: #414141;
+}
+.accept-item > a {
+  display: inline-block;
+  margin-left: 14px;
+  white-space: nowrap;
+  color: var(--font-c-link);
+}

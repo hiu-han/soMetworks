@@ -48,19 +48,19 @@
                       <img src="./" alt="">
                     </p>
                     <div class="space-info--text">
-                      <span class="people-num">1~6인 이용</span>
+                      <span class="people-num">1~8인 이용</span>
                       <h5 class="space-name">Focus A 공간</h5>
                       <ul class="space-keyword__list">
                         <li class="space-keyword__item">회의공간</li>
                         <li class="space-keyword__item">집중형</li>
-                        <li class="space-keyword__item"></li>
+                        <li class="space-keyword__item">대형모니터</li>
                       </ul>
                     </div>
                   </div>
                   <div class="space-select__wrap">
                     <!-- 원하는 룸을 선택하는 곳. 버튼으로 구성되어있지만 평면도로 맵핑할 예정 -->
                     <ul class="space-btn__list">
-                      <li class="space-btn focus-a"><button>Focus A</button></li>
+                      <li class="space-btn focus-a selected"><button>Focus A</button></li>
                       <li class="space-btn focus-b"><button>Focus B</button></li>
                       <li class="space-btn focus-c"><button>Focus C</button></li>
                       <li class="space-btn training-a"><button>Training A</button></li>
@@ -87,6 +87,95 @@
                 </div>
 
                 <div class="book--info-select">
+                  <form action="">
+                    <div class="book-input__wrap">
+                      <fieldset>
+                        <legend class="blind">예약 정보 입력</legend>
+                        <div class="book-input spaceName">
+                          <h6 class="book-input--name">대여 공간</h6>
+                          <p class="input-item">
+                            <span class="item-space">Open형 공간</span>
+                            <span class="item-price"><em>시간당</em><strong>10,000</strong><em>원</em></span>
+                          </p>
+                        </div>
+                        <div class="book-input enterPw">
+                          <h6 class="book-input--name">출입 비밀번호</h6>
+                          <label class="input-item">
+                            <input type="password" placeholder="숫자 4자리를 입력해주세요">
+                          </label>
+                        </div>
+                        <div class="book-input useDate">
+                          <h6 class="book-input--name">이용 날짜 선택</h6>
+                          <label class="input-item">
+                            <input type="date">
+                          </label>
+                        </div>
+                        <div class="book-input useTime">
+                          <h6 class="book-input--name">이용 시간 선택</h6>
+                          <label class="input-item">
+                            <input type="text" placeholder="이용 시간을 선택해주세요" disabled>
+                          </label>
+                        </div>
+                        <div class="book-input optionSelect">
+                          <h6 class="book-input--name">장비 대여 및 옵션</h6>
+                          <div class="input-item">
+                            <p class="option-select">
+                              <button>없음</button>
+                            <ul class="option-list">
+                              <li class="option-item">없음</li>
+                              <li class="option-item">모니터</li>
+                              <li class="option-item">노트북</li>
+                              <li class="option-item">스캐너</li>
+                            </ul>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="book-input purpose">
+                          <h6 class="book-input--name">이용 목적</h6>
+                          <label class="input-item">
+                            <input type="text" placeholder="예) 업무, 교육, 스터디 등">
+                          </label>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="book-total__wrap">
+                      <h5 class="wrap-title">결제 정보</h5>
+                      <ul class="book-total__list">
+                        <li class="book-total__item spacePrice">
+                          <span class="item--name">시간당 대여 금액</span>
+                          <span class="item--num">10,000<em>원</em></span>
+                        </li>
+                        <li class="book-total__item totlaTime">
+                          <span class="item--name">총 이용 시간</span>
+                          <span class="item--num">5<em>시간</em></span>
+                        </li>
+                        <li class="book-total__item optionPrice">
+                          <span class="item--name">옵션 금액</span>
+                          <span class="item--num">0<em>원</em></span>
+                        </li>
+                        <li class="book-total__item totalPrice">
+                          <span class="item--name">총 이용 금액</span>
+                          <span class="item--num">50,000<em>원</em></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="book-submit__wrap">
+                      <fieldset>
+                        <legend class="blind">예약하기</legend>
+                        <div class="accept-input">
+                          <p class="accept-item damaged">
+                            <label class="input-item">
+                              <input type="checkbox">
+                              <span class="input-label">시설 파손 시 배상에 대한 동의</span>
+                            </label>
+                            <a href="link-area"><span>자세히 보기</span></a>
+                          </p>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </form>
 
                 </div>
               </div>
