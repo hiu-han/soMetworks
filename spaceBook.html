@@ -60,6 +60,8 @@
                   <div class="space-select__wrap">
                     <!-- 원하는 룸을 선택하는 곳. 버튼으로 구성되어있지만 평면도로 맵핑할 예정 -->
                     <ul class="space-btn__list">
+                      <!-- .space-btn // 원하는 룸의 버튼을 click하면 .selected가 추가되어 활성화
+                            -> 상단의 .space-info--image에 선택한 룸의 이름을 class명으로 추가. -->
                       <li class="space-btn focus-a selected"><button>Focus A</button></li>
                       <li class="space-btn focus-b"><button>Focus B</button></li>
                       <li class="space-btn focus-c"><button>Focus C</button></li>
@@ -112,22 +114,22 @@
                         </div>
                         <div class="book-input useTime">
                           <h6 class="book-input--name">이용 시간 선택</h6>
-                          <label class="input-item">
+                          <label class="input-item" id="timeSelector">
                             <input type="text" placeholder="이용 시간을 선택해주세요" disabled>
                           </label>
                         </div>
                         <div class="book-input optionSelect">
                           <h6 class="book-input--name">장비 대여 및 옵션</h6>
                           <div class="input-item">
-                            <p class="option-select">
-                              <button>없음</button>
-                            <ul class="option-list">
-                              <li class="option-item">없음</li>
-                              <li class="option-item">모니터</li>
-                              <li class="option-item">노트북</li>
-                              <li class="option-item">스캐너</li>
-                            </ul>
-                            </p>
+                            <div class="option-select select--book-option">
+                              <p class="option-slected" id="bookOptionSelected">없음</p>
+                              <ul class="option__list">
+                                <li class="option__item">없음</li>
+                                <li class="option__item">모니터</li>
+                                <li class="option__item">노트북</li>
+                                <li class="option__item">스캐너</li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                         <div class="book-input purpose">
@@ -146,7 +148,7 @@
                           <span class="item--name">시간당 대여 금액</span>
                           <span class="item--num">10,000<em>원</em></span>
                         </li>
-                        <li class="book-total__item totlaTime">
+                        <li class="book-total__item totalTime">
                           <span class="item--name">총 이용 시간</span>
                           <span class="item--num">5<em>시간</em></span>
                         </li>
@@ -173,6 +175,10 @@
                             <a href="link-area"><span>자세히 보기</span></a>
                           </p>
                         </div>
+                        <p class="btn confirm">
+                          <!-- onclick // 작업을 위해 임시로 넣어둠! -->
+                          <button onclick="window.open('./spaceInfo.html','_blink')">예약하기</button>
+                        </p>
                       </fieldset>
                     </div>
                   </form>
@@ -186,10 +192,12 @@
     </div>
 
     <div id="footer"></div>
+    <div id="aside"></div>
   </div>
 
   <script src="./public/js/jquery-3.5.1.js"></script>
   <script src="./public/js/include.js"></script>
+  <script src="./public/js/modal.js"></script>
 </body>
 
 </html>

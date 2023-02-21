@@ -1,3 +1,61 @@
 <aside>
+  <div id="modal">
+    <!-- 이용시간 설정 모달 시작 -->
+    <div class="modal__container timeTable" id="modalTimeTable">
+      <div class="modal-bg"></div>
+      <section class="modal__box">
+        <div class="modal__inner">
+          <div class="modal--head">
+            <div class="head-text__wrap">
+              <h4 class="modal-title">이용 시간 설정하기</h4>
+              <span class="modal-sub-title">이용 시작과 종료 시간을 선택해 주세요.</span>
+            </div>
+            <!-- <div class="head-btn__wrap"></div> -->
+            <p class="btn btn--cls btn--modal-cls">
+              <button>X</button>
+            </p>
+          </div>
 
+          <div class="modal--body">
+            <div class="time-table__wrap">
+              <ul class="time-table__list">
+                <!-- .time-table__item // 
+                  .timeStart >> 첫 클릭대상 > 이용 시작시간
+                  .timeEnd   >> 두번째 클릭대상 > 이용 종료시간
+                  .timeIn    >> 시작과 종료사이의 시간
+                  .timeOut   >> 이용 불가능한 시간
+                -->
+                <li class="time-table__item" id="time0900"><span>09:00</span></li>
+                <li class="time-table__item timeStart" id="time1000"><span>10:00</span></li>
+                <li class="time-table__item timeIn" id="time1100"><span>11:00</span></li>
+                <li class="time-table__item timeIn" id="time1200"><span>12:00</span></li>
+                <li class="time-table__item timeIn" id="time1300"><span>13:00</span></li>
+                <li class="time-table__item timeIn" id="time1400"><span>14:00</span></li>
+                <li class="time-table__item tiemEnd" id="time1500"><span>15:00</span></li>
+                <li class="time-table__item" id="time1600"><span>16:00</span></li>
+                <li class="time-table__item" id="time1700"><span>17:00</span></li>
+                <li class="time-table__item" id="time1800"><span>18:00</span></li>
+                <li class="time-table__item" id="time1900"><span>19:00</span></li>
+                <li class="time-table__item timeOut" id="time2000"><span>20:00</span></li>
+                <li class="time-table__item timeOut" id="time2100"><span>21:00</span></li>
+                <li class="time-table__item timeOut" id="time2200"><span>22:00</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="modal--foot">
+            <div class="foot-btn__wrap">
+              <p class="btn goBack btn--modal-goback">
+                <button>닫기</button>
+              </p>
+              <p class="btn confirm">
+                <button>예약시간 저장</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- 이용시간 설정 모달 끝 -->
+  </div>
 </aside>

@@ -6,8 +6,13 @@
   --font-s-normal: 16px;
   --font-w-bold: 600;
   --font-c-link: #66bef9;
+  --font-c-info: #375c81;
 
   --btn-transition: 0.2s ease-in;
+
+  --boxshadow-l-obj: 1px 3px 12px rgba(0, 0, 0, 0.2);
+  --boxshadow-m-obj: 1px 3px 8px rgba(88, 88, 88, 0.2);
+  --boxshadow-s-obj: 1px 3px 6px rgba(88, 88, 88, 0.15);
 }
 
 /*** MAIN ***/
@@ -28,6 +33,7 @@ body {
 #main {
   width: 100%;
   padding-top: 45px;
+  padding-bottom: 170px;
 }
 .intro-page #main {
   padding-top: 0;
@@ -55,7 +61,7 @@ body {
   padding: 35px 30px;
   margin: 0 auto;
   background-color: #fff;
-  box-shadow: 1px 3px 12px rgba(88, 88, 88, 0.2);
+  box-shadow: var(--boxshadow-l-obj);
 }
 .join-page .login__container {
   top: 50%;
@@ -91,13 +97,13 @@ body {
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
-.login__container .content--head .link-item.goBack {
+.content--head .link-item.goBack {
   position: absolute;
   bottom: 15px;
   left: 0;
   padding-left: 4px;
 }
-.login__container .content--head .link-item.goBack::before {
+.content--head .link-item.goBack::before {
   content: '<';
   display: inline-block;
   margin-right: 2px;
@@ -414,11 +420,13 @@ body {
   line-height: 3;
   border: 1px solid #ddd;
   background-color: #fff;
-  /* transition: var(--btn-transition); */
+  box-shadow: var(--boxshadow-s-obj);
+  transition: var(--btn-transition);
 }
 .space-select__wrap .space-btn > button:hover {
   border: 1px solid #ccc;
   background-color: #eee;
+  box-shadow: var(--boxshadow-m-obj);
 }
 .space-select__wrap .space-btn.selected > button {
   border: 1px solid #313131;
@@ -478,4 +486,136 @@ body {
 .book-input.spaceName > .input-item > span > em {
   font-size: 12px;
   font-weight: 400;
+}
+
+.book-input.optionSelect > .input-item > .option-select {
+  width: 100%;
+}
+.book-input.optionSelect > .input-item > .option-select > #bookOptionSelected {
+  padding: 0 14px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  line-height: 2.8;
+  text-align: left;
+}
+
+.book-total__wrap {
+  padding-top: 24px;
+  margin: 14px 0 30px;
+  border-top: 8px solid #eee;
+}
+.wrap-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.book-total__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.book-total__item.optionPrice {
+  margin-bottom: 0;
+}
+.book-total__item .item--name {
+  font-weight: 500;
+  color: #7d7d81;
+}
+.book-total__item .item--num {
+  font-weight: 600;
+}
+
+.book-total__item.totalPrice {
+  padding-top: 20px;
+  margin: 20px 0 0;
+  border-top: 1px solid #ddd;
+  font-size: 22px;
+}
+.book-total__item.totalPrice .item--num {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.book-submit__wrap .accept-input {
+  margin-bottom: 24px;
+}
+.book-submit__wrap .btn.confirm > button {
+  font-size: 16px;
+}
+
+/** MAIN -> booked info page **/
+.book-check__container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 520px;
+  padding: 35px 30px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: var(--boxshadow-l-obj);
+}
+.book-check__container .txt-info {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--font-c-info);
+}
+
+.book-check__container .content--head {
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.book-check__container .container-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.book-check__container .content--body {
+  padding: 24px 0 0;
+}
+.book-check__container .content--body .box-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.book-check__container .seleced-info__wrap,
+.book-check__container .cost-info__wrap {
+  padding: 24px 0px;
+  border-bottom: 1px solid #ddd;
+}
+.book-check__container .seleced-info__wrap {
+  padding-top: 0;
+}
+.book-check__container .booked-info__list {
+  padding: 0 20px;
+}
+.book-check__container .booked-info__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.book-check__container .booked-info__item:last-child {
+  margin-bottom: 0;
+}
+
+.book-check__container .content--foot {
+  margin-top: 24px;
+}
+.book-check__container .content--foot .txt-info {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+.book-check__container .content--foot .btn.confirm {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
 }

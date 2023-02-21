@@ -10,6 +10,27 @@ strong {
   font-weight: 700;
 }
 
+/** COMMON -> BTN **/
+.btn > button,
+.btn > a {
+  padding: 0 24px;
+  cursor: pointer;
+}
+.btn.confirm > button,
+.btn.confirm > a {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+  line-height: 3;
+  transition: var(--btn-transition);
+}
+.btn.confirm > button:hover {
+  border: 1px solid #212121;
+  background-color: #212121;
+}
+
 .accept-input {
   display: block;
   width: 100%;
@@ -37,4 +58,41 @@ strong {
   margin-left: 14px;
   white-space: nowrap;
   color: var(--font-c-link);
+}
+
+.option-select {
+  position: relative;
+  cursor: pointer;
+}
+.option-select > .option-selected {
+  position: relative;
+  width: 100%;
+}
+.option-select > .option__list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+  /* padding: 0 14px; */
+  box-shadow: var(--boxshadow-m-obj);
+}
+.option-select:hover > .option__list {
+  display: block;
+}
+.option-select .option__item {
+  padding: 6px 14px;
+}
+/* .option-select .option__item:nth-child(even) {
+  background-color: #f9f9f9;
+} */
+.option-select .option__item:first-child {
+  padding-top: 12px;
+}
+.option-select .option__item:last-child {
+  padding-bottom: 12px;
+}
+.option-select .option__item:hover {
+  background-color: #f6f6f6;
 }

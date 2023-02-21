@@ -1,0 +1,142 @@
+#modal {
+}
+
+.modal__container {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.modal__container.nowOn {
+  display: flex;
+}
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal__box {
+  position: relative;
+  width: 100%;
+  max-width: 990px;
+  padding: 42px 54px;
+  background-color: #fff;
+  box-shadow: var(--boxshadow-l-obj);
+}
+.modal__inner {
+  position: relative;
+  width: 100%;
+}
+
+.modal--head {
+  margin-bottom: 24px;
+}
+.modal--head .modal-title {
+  margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.modal--head .modal-sub-title {
+  font-size: 14px;
+  color: #375c81;
+}
+.modal--head .btn--cls {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.modal--head .btn--cls > button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url('../img/icon/icon-close-default.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
+.modal--body {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal--foot {
+  margin-top: 24px;
+}
+.foot-btn__wrap {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.foot-btn__wrap .btn {
+  /* cursor: pointer; */
+}
+.foot-btn__wrap .btn > button,
+.foot-btn__wrap .btn > a {
+  padding: 0 24px;
+  line-height: 46px;
+  /* box-shadow: var(--boxshadow-s-obj); */
+  cursor: pointer;
+}
+.foot-btn__wrap .btn.goBack > button {
+  border: 1px solid #e1e1e1;
+  background-color: #e1e1e1;
+}
+.foot-btn__wrap .btn.goBack > button:hover {
+  border: 1px solid #d1d1d1;
+  background-color: #d1d1d1;
+}
+.foot-btn__wrap .btn.confirm > button {
+  font-size: 14px;
+}
+.foot-btn__wrap .btn.confirm > button:hover {
+}
+
+/** MODAL -> time-table **/
+.modal--body .time-table__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+.modal--body .time-table__item {
+  width: 12.5%;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--boxshadow-s-obj);
+  transition: var(--btn-transition);
+}
+.modal--body .time-table__item:hover {
+  background-color: #eee;
+}
+.modal--body .time-table__item.timeStart,
+.modal--body .time-table__item.timeIn,
+.modal--body .time-table__item.timeEnd {
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+}
+.modal--body .time-table__item.timeOut {
+  border: 1px solid #ddd;
+  background-color: #eee;
+  color: #aaa;
+  cursor: default;
+  box-shadow: none;
+}
+.modal--body .time-table__item > span {
+  display: block;
+  line-height: 46px;
+}
