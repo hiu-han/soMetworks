@@ -1,8 +1,10 @@
 /*** HEADER ***/
 #header {
+  position: relative;
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 1px 8px rgba(88, 88, 88, 0.2);
+  z-index: 100;
 }
 header {
   width: 100%;
@@ -81,11 +83,34 @@ nav {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  transition: var(--btn-transition);
+}
+#primary-menu > .gnb__item.user:hover .user--icon {
+  box-shadow: var(--boxshadow-s-obj);
 }
 #primary-menu > .gnb__item.user .user--menu__list {
+  display: none;
   position: absolute;
-  top: 100%;
+  top: 86%;
   left: 0;
+  width: 100%;
+  padding: 8px 14px;
+  background-color: #fff;
+  box-shadow: var(--boxshadow-m-obj);
+}
+#primary-menu > .gnb__item.user .user--menu__item {
+  text-align: center;
+  line-height: 2;
+  font-size: 14px;
+}
+#primary-menu > .gnb__item.user .user--menu__item > a {
+  display: block;
+}
+#primary-menu > .gnb__item.user .user--menu__item.logout > a {
+  color: #ff6060;
+}
+#primary-menu > .gnb__item.user:hover .user--menu__list {
+  display: block;
 }
 
 /*** FOOTER ***/

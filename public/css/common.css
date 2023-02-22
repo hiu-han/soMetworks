@@ -30,7 +30,92 @@ strong {
   border: 1px solid #212121;
   background-color: #212121;
 }
+.btn.cancel {
+  width: 40%;
+}
+.btn.cancel > button {
+  width: 100%;
+  line-height: 3;
+  border: 1px solid #e1e1e1;
+  background-color: #e1e1e1;
+  font-size: 15px;
+  color: #313131;
+  transition: var(--btn-transition);
+}
 
+/** COMMON -> INPUT **/
+.input-item {
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.input-item.pwChk {
+  margin-top: -6px;
+}
+.input-item:last-child {
+  margin-bottom: 0;
+}
+.input-label {
+  position: relative;
+}
+.input-label > .label-txt {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.input-label > input {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 15px;
+  line-height: 3;
+}
+.input-label > input::placeholder {
+  color: #999;
+}
+.input-label > input:focus {
+  border: 1px solid #414141;
+}
+.input-label.fixed > input {
+  border: 1px solid #eee;
+  background-color: #f4f4f4;
+}
+.input-item.halfWidth {
+  display: inline-block;
+  width: calc(50% - 4px);
+}
+/* .input-item.halfWidth:nth-of-type(odd) {
+  margin-right: 8px;
+} */
+.input-item.job.halfWidth {
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.input-item .txt-add {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.input-item .txt-add.alert {
+  display: block;
+}
+.input-item > .txt-add {
+  margin: 2px 0 4px;
+}
+.input-label .hint-txt {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ccc;
+}
+
+/** COMMON -> ACCEPT INPUT **/
 .accept-input {
   display: block;
   width: 100%;
@@ -38,7 +123,6 @@ strong {
 .accept-item {
   display: flex;
   flex-wrap: nowrap;
-  /* justify-content: space-between; */
   justify-content: left;
   margin-bottom: 8px;
   font-size: 14px;
@@ -75,7 +159,6 @@ strong {
   top: 100%;
   width: 100%;
   background-color: #fff;
-  /* padding: 0 14px; */
   box-shadow: var(--boxshadow-m-obj);
 }
 .option-select:hover > .option__list {
@@ -84,9 +167,6 @@ strong {
 .option-select .option__item {
   padding: 6px 14px;
 }
-/* .option-select .option__item:nth-child(even) {
-  background-color: #f9f9f9;
-} */
 .option-select .option__item:first-child {
   padding-top: 12px;
 }
@@ -99,6 +179,7 @@ strong {
 
 /** COMMON -> badge **/
 .badge--status {
+  display: inline-block;
   padding: 0 10px;
   border-radius: 8px;
   border: 1px solid #bbb;
