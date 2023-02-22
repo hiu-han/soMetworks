@@ -96,3 +96,27 @@ strong {
 .option-select .option__item:hover {
   background-color: #f6f6f6;
 }
+
+/** COMMON -> badge **/
+.badge--status {
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background-color: #bbb;
+  font-size: 14px;
+  color: #fff;
+  line-height: 2;
+  cursor: default;
+}
+.content--head .badge--status {
+  margin-top: -4px;
+}
+.badge--status.used,
+.badge--status.canceled {
+  border: 1px solid #bbb;
+  background-color: #bbb;
+}
+.badge--status.booked {
+  border: 1px solid #313131;
+  background-color: #313131;
+}

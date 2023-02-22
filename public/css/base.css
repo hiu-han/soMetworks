@@ -41,6 +41,10 @@ body {
 .container-page #main {
   padding-top: 0;
 }
+.container-page.booked-info #main,
+.container-page.history #main {
+  padding-top: 45px;
+}
 .wrapper {
   width: 100%;
   max-width: 1048px;
@@ -48,6 +52,9 @@ body {
 }
 .intro-page #main .wrapper {
   max-width: unset;
+}
+#wrap.history #main .wrapper {
+  max-width: 520px;
 }
 
 /** MAIN -> user pages **/
@@ -345,6 +352,9 @@ body {
 }
 
 /** CONTENT -> common **/
+.page-top {
+  margin-bottom: 24px;
+}
 .page-title {
   font-size: 25px;
   font-weight: 700;
@@ -547,10 +557,6 @@ body {
 
 /** MAIN -> booked info page **/
 .book-check__container {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   max-width: 520px;
   padding: 35px 30px;
@@ -604,6 +610,14 @@ body {
 .book-check__container .booked-info__item:last-child {
   margin-bottom: 0;
 }
+.booked-info__item .item--name {
+  font-size: 16px;
+  color: #7d7d81;
+}
+.booked-info__item .item--num {
+  font-size: 16px;
+  font-weight: 500;
+}
 
 .book-check__container .content--foot {
   margin-top: 24px;
@@ -618,4 +632,26 @@ body {
   width: 100%;
   text-align: center;
   font-size: 16px;
+}
+
+/** MAIN -> history page **/
+#wrap.history .book-check__container {
+  margin-bottom: 24px;
+}
+#wrap.history .book-check__container:last-child {
+  margin-bottom: 0;
+}
+#wrap.history .content--head {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.content--head .booked-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#wrap.history .cost-info__wrap {
+  padding-bottom: 0;
+  border-bottom: none;
 }
