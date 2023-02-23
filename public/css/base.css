@@ -352,6 +352,13 @@ body {
   font-weight: 700;
 }
 
+/** CONTENT -> use guide page **/
+.content--body__box {
+  padding: 40px 45px;
+  border-radius: 36px;
+  background-color: #f6f6f6;
+}
+
 /** CONTENT -> space book page **/
 .content--space-book .section-content__inner {
   display: flex;
@@ -555,11 +562,6 @@ body {
   margin: 0 auto;
   background-color: #fff;
   box-shadow: var(--boxshadow-l-obj);
-}
-.book-check__container .txt-info {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--font-c-info);
 }
 
 .book-check__container .content--head {
