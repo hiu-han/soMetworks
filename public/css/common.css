@@ -207,3 +207,37 @@ strong {
   border: 1px solid #313131;
   background-color: #313131;
 }
+
+/** COMMON -> num badge **/
+.num-badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/icon/icon-num-01.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.num-badge.num--02 {
+  background-image: url('../img/icon/icon-num-02.svg');
+}
+.num-badge.num--03 {
+  background-image: url('../img/icon/icon-num-03.svg');
+}
+
+/** COMMON -> list item - dot **/
+.item--dot {
+  position: relative;
+  padding-left: 14px;
+}
+.item--dot::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #555;
+}

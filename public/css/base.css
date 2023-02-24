@@ -353,10 +353,143 @@ body {
 }
 
 /** CONTENT -> use guide page **/
-.content--body__box {
+.page-article.useGuide .page-content {
+  margin-bottom: 54px;
+}
+.page-article.useGuide .page-content:last-child {
+  margin-bottom: 0px;
+}
+.content--head .content-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.content--head .content-title .title--num {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 22px;
+  color: #375c81;
+}
+.content--head .txt-info {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.page-article.useGuide .content--body__box {
+  display: flex;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
   padding: 40px 45px;
   border-radius: 36px;
   background-color: #f6f6f6;
+}
+.content--use-guide .book-process__wrap {
+  width: 50%;
+}
+.content--use-guide .book-process-img__wrap {
+  position: relative;
+  width: 50%;
+}
+.content--use-guide .book-process-img {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 96%;
+}
+.content--use-guide .book-process-img > img {
+  width: 100%;
+}
+.content--use-guide .content--body__box .process__list {
+  padding-left: 30px;
+}
+.content--use-guide .content--body__box .process__item {
+  display: inline-block;
+  position: relative;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: var(--boxshadow-m-obj);
+}
+.content--use-guide .content--body__box .process__item:last-child {
+  margin-bottom: 0;
+}
+.content--use-guide .content--body__box .process__item.process--01 {
+  margin-left: 80px;
+}
+.content--use-guide .content--body__box .process__item.process--02 {
+  margin-left: 40px;
+}
+.content--use-guide .process__item .process--num {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.content--use-guide .process__item .process--txt {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.content--use-guide .process__item.process--03 .process--txt {
+  font-weight: 700;
+}
+.content--use-guide .process__item.process--03 .process--icon {
+  display: block;
+  position: absolute;
+  bottom: 70%;
+  left: 90%;
+  padding: 0 14px;
+  border-radius: 30px;
+  background-color: #ff934b;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #fff;
+}
+
+.content--book-guide .book-guide-img__wrap {
+  width: 16%;
+  max-width: 154px;
+  margin-right: 46px;
+}
+.content--book-guide .book-guide-img__wrap img {
+  width: 100%;
+}
+.book-guide__wrap {
+}
+.book-guide__list {
+}
+.book-guide__item {
+  margin-bottom: 12px;
+}
+.book-guide__item > span {
+  display: inline-block;
+  font-size: 16px;
+}
+.book-guide__item > .item--name {
+  min-width: 110px;
+  font-weight: 600;
+}
+
+.content--note-guide .note-guide-img__wrap {
+  width: 13%;
+  max-width: 120px;
+  margin-right: 46px;
+}
+.content--note-guide .note-guide-img__wrap img {
+  width: 100%;
+}
+
+.note-guide__wrap {
+}
+.note-guide__list {
+}
+.note-guide__item {
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
 /** CONTENT -> space book page **/
