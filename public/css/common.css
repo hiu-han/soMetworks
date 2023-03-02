@@ -19,8 +19,20 @@ strong {
 /** COMMON -> BTN **/
 .btn > button,
 .btn > a {
+}
+.btn > a {
+  display: inline-block;
   padding: 0 24px;
+  border: 1px solid #aaa;
+  line-height: 2.8;
+  transition: var(--btn-transition);
   cursor: pointer;
+}
+.btn > button:hover,
+.btn > a:hover {
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
 }
 .btn.confirm > button,
 .btn.confirm > a {
