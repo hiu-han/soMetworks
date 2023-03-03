@@ -19,6 +19,7 @@ strong {
 /** COMMON -> BTN **/
 .btn > button,
 .btn > a {
+  cursor: pointer;
 }
 .btn > a {
   display: inline-block;

@@ -126,6 +126,19 @@
                           </ul>
                         </li>
                         <li class="info-sort__item typeOpen">
+                          <h5 class="thumb-title">다목적형</h5>
+                          <ul class="thumb__list">
+                            <li id="spaceOpen" class="thumb__item">
+                              <span class="thumb--img"></span>
+                              <span class="thumb--txt">Open zone</span>
+                            </li>
+                            <li id="spaceWzone" class="thumb__item">
+                              <span class="thumb--img"></span>
+                              <span class="thumb--txt">W zone</span>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- <li class="info-sort__item typeOpen">
                           <h5 class="thumb-title">개방형</h5>
                           <ul class="thumb__list">
                             <li id="spaceOpen" class="thumb__item">
@@ -142,7 +155,7 @@
                               <span class="thumb--txt">W zone</span>
                             </li>
                           </ul>
-                        </li>
+                        </li> -->
                       </ul>
                     </div>
 
@@ -210,19 +223,11 @@
 
   <script>
     $(document).ready(function () {
-      $(".info-sort__item .thumb__item").on('click', function () {
-        const spaceId = $(this).attr('id');
-        const NOWON_CLASSNAME = 'nowOn'
-
-        $(".info-sort__item .thumb__item").removeClass(NOWON_CLASSNAME);
-        $(this).addClass(NOWON_CLASSNAME);
-        $(".space-info__wrap").attr("class", "").addClass(`space-info__wrap ${spaceId}`);
-        console.log(spaceId);
-      })
     })
   </script>
   <script src="./public/js/jquery-3.5.1.js"></script>
   <script src="./public/js/include.js"></script>
+  <script src="./public/js/index.js"></script>
   <script src="./public/js/modal.js"></script>
 </body>
 

@@ -46,10 +46,10 @@
 
               <div class="content--body">
                 <div class="book--space-select">
-                  <div class="space-info__wrap">
+                  <div class="space-info__wrap bookFocusA">
                     <!-- .space-select__wrap에서 선택한 공간의 사진과 정보가 노출됨 -->
                     <p class="space-info--image">
-                      <img src="./" alt="">
+                      <span class="img-box"></span>
                     </p>
                     <div class="space-info--text">
                       <span class="people-num">1~8인 이용</span>
@@ -66,28 +66,32 @@
                     <ul class="space-btn__list">
                       <!-- .space-btn // 원하는 룸의 버튼을 click하면 .selected가 추가되어 활성화
                             -> 상단의 .space-info--image에 선택한 룸의 이름을 class명으로 추가. -->
-                      <li class="space-btn focus-a selected"><button>Focus A</button></li>
-                      <li class="space-btn focus-b"><button>Focus B</button></li>
-                      <li class="space-btn focus-c"><button>Focus C</button></li>
-                      <li class="space-btn training-a"><button>Training A</button></li>
-                      <li class="space-btn training-b"><button>Training B</button></li>
-                      <li class="space-btn FGM"><button>FGM</button></li>
-                      <li class="space-btn FDM"><button>FDM</button></li>
-                      <li class="space-btn w-1"><button>w-1</button></li>
-                      <li class="space-btn w-2"><button>w-2</button></li>
-                      <li class="space-btn w-3"><button>w-3</button></li>
-                      <li class="space-btn w-4"><button>w-4</button></li>
-                      <li class="space-btn w-5"><button>w-5</button></li>
-                      <li class="space-btn w-6"><button>w-6</button></li>
-                      <li class="space-btn w-7"><button>w-7</button></li>
-                      <li class="space-btn w-8"><button>w-8</button></li>
-                      <li class="space-btn w-9"><button>w-9</button></li>
-                      <li class="space-btn w-10"><button>w-10</button></li>
-                      <li class="space-btn w-11"><button>w-11</button></li>
-                      <li class="space-btn w-12"><button>w-12</button></li>
-                      <li class="space-btn w-13"><button>w-13</button></li>
-                      <li class="space-btn w-14"><button>w-14</button></li>
-                      <li class="space-btn w-15"><button>w-15</button></li>
+                      <li id="bookFocusA" class="space-btn selected"><button>Focus A</button></li>
+                      <li id="bookFocusB" class="space-btn"><button>Focus B</button></li>
+                      <li id="bookFocusC" class="space-btn"><button>Focus C</button></li>
+                      <li id="bookTrainingA" class="space-btn"><button>Training A</button></li>
+                      <li id="bookTrainingB" class="space-btn"><button>Training B</button></li>
+                      <li id="bookTrainingAB" class="space-btn"><button>Training A+B</button></li>
+                      <li id="bookFGM" class="space-btn"><button>FGM</button></li>
+                      <li id="bookFGD" class="space-btn"><button>FGD</button></li>
+                      <li id="bookM1" class="space-btn"><button>M 1</button></li>
+                      <li id="bookM2" class="space-btn"><button>M 2</button></li>
+                      <li id="bookOpen" class="space-btn"><button>Open zone</button></li>
+                      <li id="bookW-01" class="space-btn"><button>w-1</button></li>
+                      <li id="bookW-02" class="space-btn"><button>w-2</button></li>
+                      <li id="bookW-03" class="space-btn"><button>w-3</button></li>
+                      <li id="bookW-04" class="space-btn"><button>w-4</button></li>
+                      <li id="bookW-05" class="space-btn"><button>w-5</button></li>
+                      <li id="bookW-06" class="space-btn"><button>w-6</button></li>
+                      <li id="bookW-07" class="space-btn"><button>w-7</button></li>
+                      <li id="bookW-08" class="space-btn"><button>w-8</button></li>
+                      <li id="bookW-09" class="space-btn"><button>w-9</button></li>
+                      <li id="bookW-10" class="space-btn"><button>w-10</button></li>
+                      <li id="bookW-11" class="space-btn"><button>w-11</button></li>
+                      <li id="bookW-12" class="space-btn"><button>w-12</button></li>
+                      <li id="bookW-13" class="space-btn"><button>w-13</button></li>
+                      <li id="bookW-14" class="space-btn"><button>w-14</button></li>
+                      <li id="bookW-15" class="space-btn"><button>w-15</button></li>
                     </ul>
                   </div>
                 </div>
@@ -202,6 +206,7 @@
 
   <script src="./public/js/jquery-3.5.1.js"></script>
   <script src="./public/js/include.js"></script>
+  <script src="./public/js/index.js"></script>
   <script src="./public/js/modal.js"></script>
 </body>
 

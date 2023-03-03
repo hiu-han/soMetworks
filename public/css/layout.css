@@ -87,6 +87,7 @@ nav {
 }
 #primary-menu > .gnb__item.user:hover .user--icon {
   box-shadow: var(--boxshadow-s-obj);
+  cursor: pointer;
 }
 #primary-menu > .gnb__item.user .user--menu__list {
   display: none;
