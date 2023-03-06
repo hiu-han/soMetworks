@@ -174,4 +174,13 @@ $(document).ready(function () {
       .attr('class', '')
       .addClass(`space-info__wrap ${spaceId}`);
   });
+
+  //
+  //
+  //
+  // fetch('./public/data/spaceList.json')
+  //   .then((response) => {
+  //     return response.json();
+  //   })
+  //   .then((jsondata) => console.log(jsondata));
 });
