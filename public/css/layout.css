@@ -21,8 +21,6 @@ header {
 }
 
 /** HEADER -> logo **/
-.logo {
-}
 .logo .txt--strong,
 .logo .txt--regular {
   display: inline-block;

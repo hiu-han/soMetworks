@@ -19,10 +19,10 @@
 </head>
 
 <body>
-  <div id="wrap" class="intro-page">
+  <div id="wrap">
     <div id="header"></div>
 
-    <div id="main">
+    <div id="main" class="intro-page">
       <div class="wrapper">
         <section class="main-banner">
           <div class="section__inner">
@@ -61,29 +61,38 @@
                   <div class="content--body__box space-slider__box">
                     <div class="slider-thumb__wrap">
                       <ul class="thumb__list">
-                        <li class="thumb__item focusZone">
+                        <li class="thumb__item focusZone nowOn">
                           <p class="thumb--name"><span>Focus zone</span></p>
                         </li>
                         <li class="thumb__item trainingZone">
-                          <p class="thumb--name">Training zone</p>
+                          <p class="thumb--name"><span>Training zone</span></p>
                         </li>
                         <li class="thumb__item monitorZone">
-                          <p class="thumb--name">Monitoring zone</p>
+                          <p class="thumb--name"><span>Monitoring zone</span></p>
                         </li>
                         <li class="thumb__item workZone">
-                          <p class="thumb--name">Work zone</p>
+                          <p class="thumb--name"><span>Work zone</span></p>
                         </li>
                         <li class="thumb__item openZone">
-                          <p class="thumb--name">Open zone</p>
+                          <p class="thumb--name"><span>Open zone</span></p>
                         </li>
                         <li class="thumb__item mZone">
-                          <p class="thumb--name">M zone</p>
+                          <p class="thumb--name"><span>M zone</span></p>
                         </li>
                       </ul>
                     </div>
 
                     <div class="slider-img__wrap">
-                      <p class="slider-img"></p>
+                      <div class="slider-img">
+                        <ul class="img__list">
+                          <li class="img__item focusZone"></li>
+                          <li class="img__item trainingZone"></li>
+                          <li class="img__item monitoringZone"></li>
+                          <li class="img__item workZone"></li>
+                          <li class="img__item openZone"></li>
+                          <li class="img__item mZone"></li>
+                        </ul>
+                      </div>
 
                       <ul class="slider-arrow__list">
                         <li class="btn btn-arrow prev"><span>prev</span></li>
@@ -226,9 +235,14 @@
 
                     <div class="content__wrap metworks-map__wrap">
                       <div class="contact--map">
-                        <iframe width="100%" height="100%" id="gmap_canvas"
+                        <!-- <iframe width="100%" height="100%" id="gmap_canvas"
                           src="https://maps.google.com/maps?q=42,%20Yangjaecheon-ro%2019-gil,%20Seocho-gu,%20Seoul,%20Republi%20of%20Korea&t=&z=15&ie=UTF8&iwloc=&output=embed"
                           frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe> -->
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.6665934110327!2d127.04185761073968!3d37.46758057667391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca6d2faa4be51%3A0x7e0c30cad1cc9649!2z7ISg7Jqw67mM65Sp!5e0!3m2!1sko!2skr!4v1678078794461!5m2!1sko!2skr"
+                          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade" scrolling="no">
                         </iframe>
                       </div>
                     </div>
@@ -247,6 +261,7 @@
 
   <script src="./public/js/jquery-3.5.1.js"></script>
   <script src="./public/js/include.js"></script>
+  <script src="./public/js/index.js"></script>
 </body>
 
 </html>
