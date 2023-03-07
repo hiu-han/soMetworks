@@ -419,6 +419,24 @@ body {
   cursor: pointer;
   z-index: 50;
 }
+.content--space-slider .thumb__item.focusZone {
+  background-image: url('../img/main/focus_thumb.png');
+}
+.content--space-slider .thumb__item.trainingZone {
+  background-image: url('../img/main/training_thumb.png');
+}
+.content--space-slider .thumb__item.monitorZone {
+  background-image: url('../img/main/monitoring_thumb.png');
+}
+.content--space-slider .thumb__item.workZone {
+  background-image: url('../img/main/workZone_thumb.png');
+}
+.content--space-slider .thumb__item.openZone {
+  background-image: url('../img/main/openZone_thumb.png');
+}
+.content--space-slider .thumb__item.mZone {
+  background-image: url('../img/main/mZone_thumb.png');
+}
 .content--space-slider .thumb__item:hover,
 .content--space-slider .thumb__item.nowOn {
   box-shadow: var(--boxshadow-m-focus);
@@ -437,8 +455,8 @@ body {
 }
 .content--space-slider .thumb__item:hover:after,
 .content--space-slider .thumb__item.nowOn:after {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.7);
+  /* backdrop-filter: blur(5px); */
 }
 .content--space-slider .thumb__item > .thumb--name {
   display: flex;
@@ -458,7 +476,7 @@ body {
 .content--space-slider .thumb__item.nowOn > .thumb--name {
   width: 90%;
   height: 90%;
-  border: 5px solid #fff;
+  border: 4px solid #fff;
 }
 .content--space-slider .slider-img__wrap {
   position: relative;
@@ -480,28 +498,34 @@ body {
   width: calc(100% / 7);
   height: 100%;
   /* background-image: url('../img/main/banner-bg-01.jpg'); */
-  background-color: lightblue;
+  background-color: lightgray;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 .content--space-slider .slider-img .img__item.focusZone {
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background-image: url('../img/main/focusA_wide.png');
 }
 .content--space-slider .slider-img .img__item.trainingZone {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
+  background-image: url('../img/main/training_wide.png');
 }
 .content--space-slider .slider-img .img__item.monitoringZone {
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
+  background-image: url('../img/main/fgd_wide.png');
 }
 .content--space-slider .slider-img .img__item.workZone {
-  background-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
+  background-image: url('../img/main/workZone_wide.png');
 }
 .content--space-slider .slider-img .img__item.openZone {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
+  background-image: url('../img/main/openZone_wide.png');
 }
 .content--space-slider .slider-img .img__item.mZone {
-  background-color: lightpink;
+  /* background-color: lightpink; */
+  background-image: url('../img/main/mZone_wide.png');
 }
 .content--space-slider .slider-arrow__list {
   display: flex;
@@ -511,6 +535,7 @@ body {
   top: 50%;
   left: 0;
   right: 0;
+  padding: 0 24px;
   transform: translateY(-50%);
   width: 100%;
 }
@@ -553,12 +578,13 @@ body {
   max-width: 700px;
   height: 38vw;
   max-height: 400px;
-  background-color: lightcoral;
+  background-color: lightgray;
+  box-shadow: var(--boxshadow-m-obj);
 }
 .content--space-inform .inform-img {
   width: 100%;
   height: 100%;
-  background-image: url('../img/main/banner-bg-01.jpg');
+  background-image: url('../img/main/training.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1284,69 +1310,61 @@ body {
   height: 32vw;
   max-height: 340px;
   margin-bottom: 18px;
+  box-shadow: var(--boxshadow-m-obj);
 }
 .content--space-info .space-info--img > .img-box {
   display: block;
   width: 100%;
   height: 100%;
   background-color: var(--test-background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .content--space-info .space-info__wrap.spaceFocusA > .space-info--img .img-box {
-  background-color: lightcoral;
-  /* background-image: url("");  */
+  background-image: url('../img/main/focusA.jpg');
 }
 .content--space-info .space-info__wrap.spaceFGM > .space-info--img .img-box {
-  background-color: lightcyan;
-  /* background-image: url("");  */
+  background-image: url('../img/main/fgm.jpg');
 }
 .content--space-info .space-info__wrap.spaceFGD > .space-info--img .img-box {
-  background-color: lightgoldenrodyellow;
-  /* background-image: url("");  */
+  background-image: url('../img/main/fgd.jpg');
 }
 .content--space-info
   .space-info__wrap.spaceTrainingA
   > .space-info--img
   .img-box {
-  background-color: lightgreen;
-  /* background-image: url("");  */
+  background-image: url('../img/main/trainingA.jpg');
 }
 .content--space-info
   .space-info__wrap.spaceTrainingB
   > .space-info--img
   .img-box {
-  background-color: lightpink;
-  /* background-image: url("");  */
+  background-image: url('../img/main/trainingB.jpg');
 }
-.content--space-info
+/* .content--space-info
   .space-info__wrap.spaceTrainingAB
   > .space-info--img
   .img-box {
-  background-color: lightsalmon;
-  /* background-image: url("");  */
-}
+  background-image: url('../img/main');
+} */
 .content--space-info .space-info__wrap.spaceFocusB > .space-info--img .img-box {
-  background-color: lightseagreen;
-  /* background-image: url("");  */
+  background-image: url('../img/main/focusB.jpg');
 }
 .content--space-info .space-info__wrap.spaceFocusC > .space-info--img .img-box {
-  background-color: lightskyblue;
-  /* background-image: url("");  */
+  background-image: url('../img/main/focusB.jpg');
 }
 .content--space-info .space-info__wrap.spaceM1 > .space-info--img .img-box {
-  background-color: lightslategray;
-  /* background-image: url("");  */
+  background-image: url('../img/main/m1.jpg');
 }
 .content--space-info .space-info__wrap.spaceM2 > .space-info--img .img-box {
-  background-color: lightsteelblue;
-  /* background-image: url("");  */
+  background-image: url('../img/main/m2.jpg');
 }
 .content--space-info .space-info__wrap.spaceOpen > .space-info--img .img-box {
-  background-color: lightyellow;
-  /* background-image: url("");  */
+  background-image: url('../img/main/openZone.jpg');
 }
 .content--space-info .space-info__wrap.spaceWzone > .space-info--img .img-box {
-  background-color: mintcream;
-  /* background-image: url("");  */
+  background-image: url('../img/main/workZone.jpg');
 }
 .content--space-info .space-info--text {
   display: flex;
@@ -1435,6 +1453,42 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.info-sort__wrap .thumb__item#spaceFocusA > .thumb--img {
+  background-image: url('../img/main/focusA_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceFGM > .thumb--img {
+  background-image: url('../img/main/fgm_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceFGD > .thumb--img {
+  background-image: url('../img/main/fgd_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceTrainingA > .thumb--img {
+  background-image: url('../img/main/trainingA_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceTrainingB > .thumb--img {
+  background-image: url('../img/main/trainingB_thumb.png');
+}
+/* .info-sort__wrap .thumb__item#space > .thumb--img {
+  background-image: url('../img/main');
+} */
+.info-sort__wrap .thumb__item#spaceFocusB > .thumb--img {
+  background-image: url('../img/main/focusB_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceFocusC > .thumb--img {
+  background-image: url('../img/main/focusC_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceM1 > .thumb--img {
+  background-image: url('../img/main/m1_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceM2 > .thumb--img {
+  background-image: url('../img/main/m2_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceOpen > .thumb--img {
+  background-image: url('../img/main/openZone_thumb.png');
+}
+.info-sort__wrap .thumb__item#spaceWzone > .thumb--img {
+  background-image: url('../img/main/workZone_thumb.png');
 }
 .info-sort__wrap .thumb__item .thumb--img::after {
   background-color: rgba(255, 255, 255, 0);
