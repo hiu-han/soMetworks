@@ -139,17 +139,19 @@ footer .logo .txt--regular {
 
 .addr__list {
   display: flex;
-  flex-wrap: nowarp;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
   justify-content: left;
+  gap: 8px 24px;
   width: 100%;
 }
 .addr__list .addr__item {
   position: relative;
-  padding-left: 14px;
-  margin-left: 14px;
+  /* padding-left: 14px; */
+  /* margin-left: 14px; */
   color: #888;
 }
-.addr__list .addr__item:first-child {
+/* .addr__list .addr__item:first-child {
   padding-left: 0;
   margin-left: 0;
 }
@@ -166,7 +168,7 @@ footer .logo .txt--regular {
   width: 1px;
   height: 10px;
   background-color: #888;
-}
+} */
 .addr__list .addr__item > span {
   display: inline-block;
 }

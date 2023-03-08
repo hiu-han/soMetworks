@@ -140,3 +140,25 @@
   display: block;
   line-height: 46px;
 }
+
+.selected-time__wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 28px;
+}
+.selected-time__wrap .selected-time > p {
+  display: inline-block;
+}
+.selected-time__wrap .selected-time > .time--txt {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--font-c-info);
+}
+.selected-time__wrap .selected-time > .time--num {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-c-info);
+}

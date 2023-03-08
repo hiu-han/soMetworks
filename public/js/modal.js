@@ -19,18 +19,18 @@ $(document).ready(function () {
     },
     modOff: function (clicker, modalName) {
       $(clicker).on('click', function (e) {
+        console.log('clicked');
         $(modalName).removeClass(NOWON_CLASSNAME);
         e.preventDefault();
         $(`${modalName} .modal-bg`).off('scroll touchmove mousewheel');
-        console.log('sss');
       });
     },
   };
 
   sModHandler.modOn('#timeSelector', '#modalTimeTable');
-  sModHandler.modOff('.btn--modal-cls button', '.modal__container');
-  sModHandler.modOff('.btn--modal-goback button', '.modal__container');
-  // sModHandler.modOff('.btn--modal-cls button', '#modalTimeTable');
-  // sModHandler.modOff('.btn--modal-goback button', '#modalTimeTable');
+  // sModHandler.modOff('.btn--modal-cls button', '.modal__container');
+  // sModHandler.modOff('.btn--modal-goback button', '.modal__container');
+  sModHandler.modOff('.btn--modal-cls button', '#modalTimeTable');
+  sModHandler.modOff('.btn--modal-goback button', '#modalTimeTable');
   /** 모달 핸들러 END */
 });
