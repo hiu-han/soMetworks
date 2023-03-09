@@ -63,6 +63,21 @@ strong {
 }
 
 /** COMMON -> INPUT **/
+input[type='date']::-webkit-calendar-picker-indicator {
+  width: 75%;
+  height: 30px;
+  border-radius: 2px;
+  background-image: url('../img/icon/Icon-calendar.svg');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: right;
+  color: #666;
+  cursor: pointer;
+}
+input[type='date']:hover::-webkit-calendar-picker-indicator {
+  background-image: url('../img/icon/icon-calendar-313131.svg');
+}
+
 .input-item {
   width: 100%;
   margin-bottom: 16px;
