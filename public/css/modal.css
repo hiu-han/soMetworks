@@ -1,4 +1,6 @@
 #modal {
+  position: relative;
+  z-index: 150;
 }
 
 .modal__container {
@@ -12,6 +14,9 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+.modal__container#modalServicePolicy {
+  display: flex;
 }
 .modal__container.nowOn {
   display: flex;
@@ -71,6 +76,9 @@
   padding-bottom: 24px;
   border-bottom: 1px solid #ddd;
 }
+.modal__container.policy .modal--body {
+  padding-bottom: 0;
+}
 
 .modal--foot {
   margin-top: 24px;
@@ -102,6 +110,42 @@
   font-size: 14px;
 }
 .foot-btn__wrap .btn.confirm > button:hover {
+}
+
+/** MODAL -> policy **/
+.policy-content__wrap {
+  padding: 24px 0;
+  max-height: 65vh;
+  overflow-y: scroll;
+}
+.policy-content__wrap .content-area {
+  margin-bottom: 24px;
+}
+.policy-content__wrap .content-area:last-child {
+  margin-bottom: 0;
+}
+.policy-content__wrap .area--title {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.policy-content__wrap .subs__txt {
+  margin-bottom: 14px;
+}
+.policy-content__wrap .subs__list {
+}
+.policy-content__wrap .subs__item {
+  font-size: 15px;
+}
+.policy-content__wrap .subs__txt,
+.policy-content__wrap .subs__item,
+.policy-content__wrap .sub__item {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.policy-content__wrap .sub__list {
+}
+.policy-content__wrap .sub__item {
 }
 
 /** MODAL -> time-table **/

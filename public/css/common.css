@@ -69,7 +69,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   border-radius: 2px;
   background-image: url('../img/icon/Icon-calendar.svg');
   background-repeat: no-repeat;
-  background-size: 18px;
+  background-size: 16px;
   background-position: right;
   color: #666;
   cursor: pointer;
