@@ -162,6 +162,11 @@ strong {
   white-space: nowrap;
   color: var(--font-c-link);
 }
+.accept-item > a > span {
+  display: inline-block;
+  height: 100%;
+  /* vertical-align: -2px; */
+}
 
 .option-select {
   position: relative;
