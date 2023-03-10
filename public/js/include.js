@@ -3,4 +3,5 @@ $(document).ready(function () {
   $('#fHeader').load('../include/header.html');
   $('#footer').load('./include/footer.html');
   $('#aside').load('./include/aside.html');
+  $('#fAside').load('../include/aside.html');
 });

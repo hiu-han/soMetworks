@@ -16,7 +16,7 @@
   right: 0;
 }
 .modal__container#modalServicePolicy {
-  display: flex;
+  /* display: flex; */
 }
 .modal__container.nowOn {
   display: flex;
@@ -78,6 +78,7 @@
 }
 .modal__container.policy .modal--body {
   padding-bottom: 0;
+  border-top: 1px solid #ddd;
 }
 
 .modal--foot {
@@ -114,12 +115,12 @@
 
 /** MODAL -> policy **/
 .policy-content__wrap {
-  padding: 24px 0;
+  padding: 24px 14px 24px 14px;
   max-height: 65vh;
   overflow-y: scroll;
 }
 .policy-content__wrap .content-area {
-  margin-bottom: 24px;
+  margin-bottom: 34px;
 }
 .policy-content__wrap .content-area:last-child {
   margin-bottom: 0;
@@ -133,8 +134,10 @@
   margin-bottom: 14px;
 }
 .policy-content__wrap .subs__list {
+  padding-left: 30px;
 }
 .policy-content__wrap .subs__item {
+  margin-bottom: 8px;
   font-size: 15px;
 }
 .policy-content__wrap .subs__txt,
@@ -142,10 +145,18 @@
 .policy-content__wrap .sub__item {
   font-size: 14px;
   line-height: 1.4;
+  word-break: keep-all;
+}
+.policy-content__wrap .subs__item,
+.policy-content__wrap .sub__item {
+  color: #515151;
 }
 .policy-content__wrap .sub__list {
+  padding-left: 30px;
+  margin-top: 2px;
 }
 .policy-content__wrap .sub__item {
+  margin-bottom: 4px;
 }
 
 /** MODAL -> time-table **/

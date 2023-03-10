@@ -19,7 +19,7 @@ $(document).ready(function () {
     },
     modOff: function (clicker, modalName) {
       $(clicker).on('click', function (e) {
-        console.log('clicked');
+        // console.log('clicked');
         $(modalName).removeClass(NOWON_CLASSNAME);
         e.preventDefault();
         $(`${modalName} .modal-bg`).off('scroll touchmove mousewheel');
@@ -32,5 +32,9 @@ $(document).ready(function () {
   // sModHandler.modOff('.btn--modal-goback button', '.modal__container');
   sModHandler.modOff('.btn--modal-cls button', '#modalTimeTable');
   sModHandler.modOff('.btn--modal-goback button', '#modalTimeTable');
+
+  sModHandler.modOn('#callServicePolicy', '#modalServicePolicy');
+  sModHandler.modOff('.btn--modal-cls button', '.modal__container');
+  sModHandler.modOff('.modal--foot .confirm button', '#modalServicePolicy');
   /** 모달 핸들러 END */
 });
