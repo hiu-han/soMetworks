@@ -774,10 +774,10 @@ body {
   color: #fff;
   text-align: center;
 }
-.content--metworks-contact .contact--map {
+.contact--map {
   width: 100%;
-  height: 40vw;
-  max-height: 426px;
+  height: 46vw;
+  max-height: 450px;
   box-shadow: var(--boxshadow-l-obj);
 }
 
@@ -1540,9 +1540,6 @@ body {
   color: #fff;
   line-height: 2.2;
   vertical-align: 1px;
-}
-.content--space-guide .map-guide__wrap .contact--map {
-  height: 390px;
 }
 
 /** MAIN -> booked info page **/
