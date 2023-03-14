@@ -84,7 +84,7 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
   font-size: 15px;
 }
 .input-item.pwChk {
-  margin-top: -6px;
+  /* margin-top: -6px; */
 }
 .input-item:last-child {
   margin-bottom: 0;
@@ -163,6 +163,7 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
 }
 .accept-item .input-item {
   width: unset !important;
+  cursor: pointer;
 }
 .accept-item:last-of-type {
   margin-bottom: 0;

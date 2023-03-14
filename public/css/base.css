@@ -449,7 +449,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: var(--btn-transition);
   z-index: 55;
 }
@@ -468,7 +468,8 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 300;
   color: #fff;
   z-index: 60;
 }
@@ -800,6 +801,9 @@ body {
 .content--head {
   margin-bottom: 24px;
 }
+.login__container .content--head {
+  margin-bottom: 0;
+}
 .content--head .content-title {
   font-size: 20px;
   font-weight: 700;
@@ -905,6 +909,8 @@ body {
 .book-guide__item > span {
   display: inline-block;
   font-size: 16px;
+  line-height: 1.4;
+  vertical-align: top;
 }
 .book-guide__item > .item--name {
   min-width: 110px;
@@ -1639,4 +1645,8 @@ body {
 #main.history .cost-info__wrap {
   padding-bottom: 0;
   border-bottom: none;
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 768px) {
 }
