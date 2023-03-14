@@ -6,6 +6,10 @@
   left: 0;
 }
 
+.item--small {
+  display: none;
+}
+
 strong {
   font-weight: 700;
 }
@@ -274,4 +278,30 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
   height: 4px;
   border-radius: 50%;
   background-color: #555;
+}
+
+/*** 1048px ***/
+@media all and (max-width: 1048px) {
+}
+/*** 1024px ***/
+@media all and (max-width: 1024px) {
+}
+/*** 960px ***/
+@media all and (max-width: 960px) {
+}
+/*** 768px ***/
+@media all and (max-width: 768px) {
+}
+/*** 680px ***/
+@media all and (max-width: 680px) {
+  /*** COMMON 680 ***/
+  .item--wide {
+    display: none !important;
+  }
+  .item--small {
+    display: block;
+  }
+}
+/*** 480px ***/
+@media all and (max-width: 480px) {
 }

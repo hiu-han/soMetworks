@@ -9,10 +9,10 @@
 
     <nav class="site-menu">
       <ul id="primary-menu" class="gnb__list">
-        <li class="gnb__item space-info">
+        <li class="gnb__item space-info item--wide">
           <a href="./spaceInfo.html">시설안내</a>
         </li>
-        <li class="gnb__item use-info">
+        <li class="gnb__item use-info item--wide">
           <a href="./useGuide.html">이용안내</a>
         </li>
         <li class="gnb__item book">
@@ -26,6 +26,12 @@
             <span class="user--icon"></span>
           </p>
           <ul class="user--menu__list">
+            <li class="user--menu__item history item--small">
+              <a href="./spaceInfo.html">시설안내</a>
+            </li>
+            <li class="user--menu__item user-info item--small">
+              <a href="./useGuide.html">이용안내</a>
+            </li>
             <li class="user--menu__item history">
               <a href="./history.html">예약내역</a>
             </li>
@@ -39,5 +45,53 @@
         </li>
       </ul>
     </nav>
+
+    <section class="site-menu--mo">
+      <ul class="primary-menu--mo gnb__list--mo">
+        <li class="gnb__item book">
+          <a href="./spaceBook.html">예약하기</a>
+        </li>
+        <li id="moGnbBtn" class="gnb__item ham">
+          <a href="./spaceBook.html">
+            <span class="ham-line line--1"></span>
+            <span class="ham-line line--2"></span>
+            <span class="ham-line line--3"></span>
+          </a>
+        </li>
+      </ul>
+      <div class="mo-menu__box">
+        <div class="mo-menu__wrap">
+          <p class="btn btn--cls">
+            <button>X</button>
+          </p>
+          <div class="user__box--mo">
+            <span class="user--icon"></span>
+            <span class="user--name">야무진진눈깨비</span>
+          </div>
+          <ul class="mo-menu__list">
+            <li class="mo-menu__item">
+              <a href="./spaceInfo.html">시설안내</a>
+            </li>
+            <li class="mo-menu__item">
+              <a href="./useGuide.html">이용안내</a>
+            </li>
+            <li class="mo-menu__item">
+              <a href="./history.html">예약내역</a>
+            </li>
+            <li class="mo-menu__item">
+              <a href="./userInfo.html">회원정보</a>
+            </li>
+            <li class="mo-menu__item">
+              <a href="#">로그아웃</a>
+            </li>
+          </ul>
+          <div class="mo-menu--footer">
+            <div class="mo-menu--footer-inner">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </header>
