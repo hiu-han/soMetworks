@@ -2,6 +2,20 @@ $(document).ready(function () {
   const NOWON_CLASSNAME = 'nowOn';
 
   //
+  /* 모바일 메뉴 오프너 */
+  function moGnbHandler(e) {
+    $('#moGnbBtn').on('click', function (e) {
+      e.preventDefault();
+      $('.mo-menu__box').addClass(NOWON_CLASSNAME);
+    });
+    $('.mo-menu__box .btn--cls').on('click', function (e) {
+      e.preventDefault();
+      $('.mo-menu__box').removeClass(NOWON_CLASSNAME);
+    });
+  }
+  moGnbHandler();
+
+  //
   /* 메인페이지 롤링 배너 */
   const rollBanner = function () {
     const $bannerBox = $('.slider-img>.img__list');
