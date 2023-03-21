@@ -936,6 +936,12 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+.content--space-book .bg-box {
+  display: none;
+}
+.content--space-book .space-select-btn__wrap {
+  display: none;
+}
 .content--space-book .book--space-select {
   width: 55%;
   padding-right: 30px;
@@ -1861,16 +1867,17 @@ body {
 
   /** MAIN > MAIN page 480 **/
   .intro-page .page-content {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
   }
   .main-banner .banner__item {
-    height: 50vh;
+    height: 100vw;
+    margin-bottom: 50px;
   }
   .banner__item .banner__txt .txt--strong {
     /* font-size: 28px; */
   }
   .banner__item .banner--subs {
-    padding-top: 24vh;
+    padding-top: 48vw;
   }
   .banner__item .banner__txt span {
     text-align: right;
@@ -1882,12 +1889,19 @@ body {
   .content--space-slider .content--head > .txt-info {
     font-size: 16px;
   }
+  .content--space-slider .thumb__list {
+    flex-wrap: wrap;
+  }
+  .content--space-slider .thumb__item {
+    width: calc(33.3333% - 10px);
+    height: 18vw;
+  }
   .content--space-slider .thumb__item:hover:after,
   .content--space-slider .thumb__item.nowOn:after {
     background-color: rgba(0, 0, 0, 0.8);
   }
   .content--space-slider .thumb__item > .thumb--name {
-    font-size: 13px;
+    font-size: 14px;
   }
   .content--space-slider .thumb__item:hover > .thumb--name,
   .content--space-slider .thumb__item.nowOn > .thumb--name {
@@ -1895,6 +1909,9 @@ body {
   }
   .content--space-slider .slider-arrow__list {
     padding: 0 8px;
+  }
+  .content--space-slider .slider-img {
+    height: 62vw;
   }
   .content--space-slider .btn-arrow {
     width: 54px;
@@ -1932,9 +1949,12 @@ body {
     border-radius: 0 0 0 0;
   }
   .content--metworks-strength .strength-icon__item > span {
-    font-size: 12px;
+    font-size: 10px;
   }
 
+  .content--metworks-contact .contact--address {
+    font-size: 16px;
+  }
   .contact--map {
     height: 84vw;
   }
@@ -2067,6 +2087,45 @@ body {
 
   .note-guide__item {
     font-size: 14px;
+  }
+
+  /** MAIN > SPACE BOOK page 480 **/
+  .content--space-book .section-content .content--body {
+    display: block;
+    flex-wrap: unset;
+    justify-content: unset;
+    /* position: relative; */
+  }
+  .content--space-book .book--space-select {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 94%;
+    padding: 40px 14px 20px;
+    background-color: #fff;
+    box-shadow: var(--boxshadow-l-obj);
+    z-index: 200;
+  }
+  .content--space-book .book--space-select.active {
+  }
+  .content--space-book .bg-box {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(88, 88, 88, 0.15);
+    z-index: 190;
+  }
+  .content--space-book .space-select-btn__wrap {
+    display: block;
+  }
+  .content--space-book .book--info-select {
+    width: 100%;
+    padding-left: 0;
+    border-left: none;
   }
 }
 
