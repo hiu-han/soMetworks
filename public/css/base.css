@@ -946,6 +946,9 @@ body {
   width: 55%;
   padding-right: 30px;
 }
+.content--space-book .book--space-select .btn--cls {
+  display: none;
+}
 .content--space-book .book--info-select {
   width: 45%;
   padding-left: 30px;
@@ -2094,7 +2097,6 @@ body {
     display: block;
     flex-wrap: unset;
     justify-content: unset;
-    /* position: relative; */
   }
   .content--space-book .book--space-select {
     position: fixed;
@@ -2109,6 +2111,9 @@ body {
   }
   .content--space-book .book--space-select.active {
   }
+  .content--space-book .book--space-select .btn--cls {
+    display: block;
+  }
   .content--space-book .bg-box {
     display: block;
     position: fixed;
@@ -2121,6 +2126,13 @@ body {
   }
   .content--space-book .space-select-btn__wrap {
     display: block;
+  }
+  .space-select__wrap .space-btn > button {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .book--space-select .space-info--image {
+    height: 60vw;
   }
   .content--space-book .book--info-select {
     width: 100%;
