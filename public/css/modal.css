@@ -130,6 +130,14 @@
   font-size: 18px;
   font-weight: 600;
 }
+.policy-content__wrap .area--subs {
+  padding-left: 14px;
+}
+.policy-content__wrap .subs--title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
 .policy-content__wrap .subs__txt {
   margin-bottom: 14px;
 }
@@ -157,6 +165,9 @@
 }
 .policy-content__wrap .sub__item {
   margin-bottom: 4px;
+}
+.policy-content__wrap .sub-detail__list {
+  padding-left: 20px;
 }
 
 /** MODAL -> time-table **/

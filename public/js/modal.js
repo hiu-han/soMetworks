@@ -33,8 +33,13 @@ $(document).ready(function () {
   sModHandler.modOff('.btn--modal-cls button', '#modalTimeTable');
   sModHandler.modOff('.btn--modal-goback button', '#modalTimeTable');
 
-  sModHandler.modOn('#callServicePolicy', '#modalServicePolicy');
+  sModHandler.modOn('#callPersonalPolicy', '#modalPersonalPolicy');
   sModHandler.modOff('.btn--modal-cls button', '.modal__container');
+  sModHandler.modOff('.modal--foot .confirm button', '#modalPersonalPolicy');
+
+  sModHandler.modOn('#callServicePolicy', '#modalServicePolicy');
+  // sModHandler.modOff('.btn--modal-cls button', '.modal__container');
   sModHandler.modOff('.modal--foot .confirm button', '#modalServicePolicy');
+
   /** 모달 핸들러 END */
 });
