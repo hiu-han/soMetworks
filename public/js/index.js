@@ -1,5 +1,6 @@
 $(document).ready(function () {
   const NOWON_CLASSNAME = 'nowOn';
+  const ACTIVE_CLASSNAME = 'active';
 
   //
   /* 모바일 메뉴 오프너 */
@@ -190,11 +191,23 @@ $(document).ready(function () {
   });
 
   //
-  //
-  //
-  // fetch('./public/data/spaceList.json')
-  //   .then((response) => {
-  //     return response.json();
-  //   })
-  //   .then((jsondata) => console.log(jsondata));
+  /* 예약하기 페이지 -> 공간선택 모달 활성화 in mobile */
+  const activeSwitcher = {
+    activeOn: function (clicker, target) {
+      $(clicker).on('click', function () {
+        $(target).addClass(ACTIVE_CLASSNAME);
+      });
+    },
+    activeOff: function (clicker, target) {
+      $(clicker).on('click', function () {
+        $(target).removeClass(ACTIVE_CLASSNAME);
+      });
+    },
+  };
+  activeSwitcher.activeOn('#callSpaceSelector', '#bgSpaceSelector');
+  activeSwitcher.activeOff(
+    '.space-select-btn__wrap .btn-confirm',
+    '#bgSpaceSelector'
+  );
+  activeSwitcher.activeOff('.book--space-select .btn--cls', '#bgSpaceSelector');
 });

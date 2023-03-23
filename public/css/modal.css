@@ -228,3 +228,44 @@
   font-weight: 600;
   color: var(--font-c-info);
 }
+
+@media all and (max-width: 1048px) {
+}
+
+@media all and (max-width: 1024px) {
+}
+
+@media all and (max-width: 960px) {
+}
+
+@media all and (max-width: 768px) {
+}
+
+@media all and (max-width: 680px) {
+  /*** MODAL 680 ***/
+  .modal__box {
+    width: 90%;
+    padding: 34px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .modal__box {
+    width: 94%;
+    padding: 24px 14px;
+  }
+  .modal--head {
+    margin-bottom: 14px;
+  }
+  .modal--head .btn--cls button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .policy-content__wrap {
+    padding: 20px 0;
+  }
+}
+
+@media all and (max-width: 320px) {
+}

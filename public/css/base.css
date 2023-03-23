@@ -948,6 +948,21 @@ body {
 }
 .content--space-book .book--space-select .btn--cls {
   display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.content--space-book .book--space-select .btn--cls button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url('../img/icon/icon-close-default.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-indent: -99999px;
+  cursor: pointer;
 }
 .content--space-book .book--info-select {
   width: 45%;
@@ -1063,7 +1078,7 @@ body {
   font-size: 14px;
 }
 .space-info--text .space-name {
-  margin: 1px 0px 4px;
+  margin: 0px 0px 8px;
   font-size: 24px;
   font-weight: 700;
 }
@@ -2098,24 +2113,8 @@ body {
     flex-wrap: unset;
     justify-content: unset;
   }
-  .content--space-book .book--space-select {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 94%;
-    padding: 40px 14px 20px;
-    background-color: #fff;
-    box-shadow: var(--boxshadow-l-obj);
-    z-index: 200;
-  }
-  .content--space-book .book--space-select.active {
-  }
-  .content--space-book .book--space-select .btn--cls {
-    display: block;
-  }
   .content--space-book .bg-box {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -2124,8 +2123,29 @@ body {
     background-color: rgba(88, 88, 88, 0.15);
     z-index: 190;
   }
-  .content--space-book .space-select-btn__wrap {
+  .content--space-book .bg-box.active {
     display: block;
+  }
+  .content--space-book .book--space-select {
+    position: fixed;
+    top: 50%;
+    left: 120%;
+    width: 94%;
+    padding: 54px 14px 70px;
+    background-color: #fff;
+    box-shadow: var(--boxshadow-l-obj);
+    z-index: 200;
+  }
+  .content--space-book .bg-box.active + .book--space-select {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .content--space-book .book--space-select .btn--cls {
+    display: block;
+  }
+
+  .space-info--text .space-name {
+    font-size: 20px;
   }
   .space-select__wrap .space-btn > button {
     font-size: 12px;
@@ -2138,6 +2158,20 @@ body {
     width: 100%;
     padding-left: 0;
     border-left: none;
+  }
+  .content--space-book .space-select-btn__wrap {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .content--space-book .space-select-btn__wrap button {
+    width: 100%;
+    line-height: 42px;
+    border: 1px solid #212121;
+    background-color: #212121;
+    color: #fff;
   }
 }
 
