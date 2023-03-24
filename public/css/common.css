@@ -304,7 +304,13 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
 }
 /*** 480px ***/
 @media all and (max-width: 480px) {
+  button,
+  .btn > button,
   .btn > a {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .input-label > input {
+    padding: 0 14px;
   }
 }

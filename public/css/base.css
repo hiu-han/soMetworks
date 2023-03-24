@@ -1866,7 +1866,7 @@ body {
 
 /*** 480px ***/
 @media all and (max-width: 480px) {
-  /** MAIN > COMMON page 480 **/
+  /** MAIN > COMMON 480 **/
   #main {
     padding-top: 34px;
   }
@@ -1881,6 +1881,43 @@ body {
   }
   .content--head .content-title {
     margin-bottom: 14px;
+  }
+  .content--head .txt-info {
+    font-size: 14px;
+  }
+
+  /** USER > LOGIN page 480 **/
+  .login__container {
+    width: 94%;
+    padding: 24px 20px;
+  }
+  .login__container .content--body {
+    padding: 20px 14px 0;
+  }
+  .content--head .link-item.goBack {
+    bottom: 17px;
+    font-size: 13px;
+  }
+
+  .login__container .content--body .box-title {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  .login__container .input__wrap {
+    margin-bottom: 10px;
+  }
+  .login__container .submit-btn__wrap {
+    padding-top: 10px;
+  }
+  .login__container .submit-btn__wrap > input {
+    font-size: 14px;
+  }
+
+  .login__container .content--foot {
+    padding: 0 14px;
+  }
+  .login__container .content--foot .login-link__wrap {
+    font-size: 13px;
   }
 
   /** MAIN > MAIN page 480 **/
@@ -2173,6 +2210,28 @@ body {
     background-color: #212121;
     color: #fff;
   }
+
+  .book-total__wrap .wrap-title {
+    margin-bottom: 14px;
+    font-size: 17px;
+  }
+  .book-total__item {
+    font-size: 15px;
+  }
+  .book-total__item > .item--num {
+    font-size: 16px;
+  }
+  .book-total__item.totalPrice {
+    font-size: 16px;
+  }
+  .book-total__item.totalPrice .item--num {
+    font-size: 18px;
+  }
+  .book-submit__wrap .btn.confirm > button {
+    font-size: 14px;
+  }
+
+  /** MAIN > BOOKED INFO page 480 **/
 }
 
 /*** 320px ***/
