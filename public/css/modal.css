@@ -95,7 +95,7 @@
 .foot-btn__wrap .btn > button,
 .foot-btn__wrap .btn > a {
   padding: 0 24px;
-  line-height: 46px;
+  line-height: 3;
   /* box-shadow: var(--boxshadow-s-obj); */
   cursor: pointer;
 }
