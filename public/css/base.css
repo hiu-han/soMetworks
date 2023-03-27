@@ -1155,22 +1155,203 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 8px;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 33vw;
+  max-height: 351px;
+  background-image: url('../img/main/map.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .space-select__wrap .space-btn {
+  position: absolute;
   width: calc(20% - 7px);
+  /* right: 0; */
 }
+.space-select__wrap .space-btn#bookFocusA,
+.space-select__wrap .space-btn#bookFocusB,
+.space-select__wrap .space-btn#bookFocusC,
+.space-select__wrap .space-btn#bookTrainingA,
+.space-select__wrap .space-btn#bookTrainingB,
+.space-select__wrap .space-btn#bookFGM,
+.space-select__wrap .space-btn#bookFGD,
+.space-select__wrap .space-btn#bookOpen,
+.space-select__wrap .space-btn#bookM1,
+.space-select__wrap .space-btn#bookM2 {
+}
+
+.space-select__wrap .space-btn#bookFocusA {
+  width: 17.5%;
+  /* height: 7vw; */
+  height: 22%;
+  max-height: 74px;
+  bottom: 2.7%;
+  right: 1.6%;
+}
+.space-select__wrap .space-btn#bookFocusB {
+  width: 9%;
+  height: 17%;
+  /* max-height: */
+  bottom: 2.7%;
+  right: 21.1%;
+}
+.space-select__wrap .space-btn#bookFocusC {
+  width: 11%;
+  height: 17%;
+  bottom: 2.7%;
+  right: 30.6%;
+}
+.space-select__wrap .space-btn#bookTrainingA {
+  width: 21%;
+  height: 33%;
+  /* right: unset; */
+  top: 2.6%;
+  left: 1.6%;
+}
+.space-select__wrap .space-btn#bookTrainingB {
+  width: 21%;
+  height: 22%;
+  /* right: unset; */
+  top: 37%;
+  left: 1.6%;
+}
+.space-select__wrap .space-btn#bookFGM {
+  width: 15%;
+  height: 24%;
+  top: 2.6%;
+  left: 23.3%;
+}
+.space-select__wrap .space-btn#bookFGD {
+  width: 22.5%;
+  height: 24%;
+  top: 2.6%;
+  left: 39%;
+}
+.space-select__wrap .space-btn#bookOpen {
+  width: 10%;
+  height: 24.2%;
+  top: 31%;
+  left: 27%;
+}
+.space-select__wrap .space-btn#bookM1 {
+  width: 13%;
+  height: 17%;
+  top: 37%;
+  right: 21.3%;
+}
+.space-select__wrap .space-btn#bookM2 {
+  width: 13%;
+  height: 17%;
+  top: 37%;
+  right: 35%;
+}
+.space-select__wrap .space-btn#bookW-01 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 2.7%;
+  right: 43.7%;
+}
+.space-select__wrap .space-btn#bookW-02 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 15.3%;
+  right: 43.7%;
+}
+.space-select__wrap .space-btn#bookW-03 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 27.8%;
+  right: 43.7%;
+}
+.space-select__wrap .space-btn#bookW-04 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 2.7%;
+  right: 52%;
+}
+.space-select__wrap .space-btn#bookW-05 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 15.3%;
+  right: 52%;
+}
+.space-select__wrap .space-btn#bookW-06 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 27.8%;
+  right: 52%;
+}
+.space-select__wrap .space-btn#bookW-07 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 2.7%;
+  right: 59.3%;
+}
+.space-select__wrap .space-btn#bookW-08 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 15.3%;
+  right: 59.3%;
+}
+.space-select__wrap .space-btn#bookW-09 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 27.8%;
+  right: 59.3%;
+}
+.space-select__wrap .space-btn#bookW-10 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 2.7%;
+  right: 67.7%;
+}
+.space-select__wrap .space-btn#bookW-11 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 15.3%;
+  right: 67.7%;
+}
+.space-select__wrap .space-btn#bookW-12 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 27.8%;
+  right: 67.7%;
+}
+.space-select__wrap .space-btn#bookW-13 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 2.7%;
+  right: 75%;
+}
+.space-select__wrap .space-btn#bookW-14 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 15.3%;
+  right: 75%;
+}
+.space-select__wrap .space-btn#bookW-15 {
+  width: 6.5%;
+  height: 11.5%;
+  bottom: 27.8%;
+  right: 75%;
+}
+
 .space-select__wrap .space-btn > button {
   width: 100%;
-  line-height: 3;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  box-shadow: var(--boxshadow-s-obj);
+  height: 100%;
+  padding: 0;
+  border: 1px solid #e5e6e4;
+  background-color: #e5e6e4;
+  font-size: 12px;
+  font-weight: 500;
   transition: var(--btn-transition);
   cursor: pointer;
 }
 .space-select__wrap .space-btn > button:hover {
   border: 1px solid #ccc;
-  background-color: #eee;
+  background-color: #d1d1d1;
   box-shadow: var(--boxshadow-m-obj);
 }
 .space-select__wrap .space-btn.nowOn > button {
