@@ -1168,7 +1168,6 @@ body {
 .space-select__wrap .space-btn {
   position: absolute;
   width: calc(20% - 7px);
-  /* right: 0; */
 }
 .space-select__wrap .space-btn#bookFocusA,
 .space-select__wrap .space-btn#bookFocusB,
@@ -1184,36 +1183,32 @@ body {
 
 .space-select__wrap .space-btn#bookFocusA {
   width: 17.5%;
-  /* height: 7vw; */
   height: 22%;
   max-height: 74px;
   bottom: 2.7%;
   right: 1.6%;
 }
 .space-select__wrap .space-btn#bookFocusB {
-  width: 9%;
+  width: 11%;
   height: 17%;
-  /* max-height: */
   bottom: 2.7%;
   right: 21.1%;
 }
 .space-select__wrap .space-btn#bookFocusC {
-  width: 11%;
+  width: 9%;
   height: 17%;
   bottom: 2.7%;
-  right: 30.6%;
+  right: 32.7%;
 }
 .space-select__wrap .space-btn#bookTrainingA {
   width: 21%;
   height: 33%;
-  /* right: unset; */
   top: 2.6%;
   left: 1.6%;
 }
 .space-select__wrap .space-btn#bookTrainingB {
   width: 21%;
   height: 22%;
-  /* right: unset; */
   top: 37%;
   left: 1.6%;
 }
@@ -1237,13 +1232,13 @@ body {
 }
 .space-select__wrap .space-btn#bookM1 {
   width: 13%;
-  height: 17%;
+  height: 15%;
   top: 37%;
   right: 21.3%;
 }
 .space-select__wrap .space-btn#bookM2 {
   width: 13%;
-  height: 17%;
+  height: 15%;
   top: 37%;
   right: 35%;
 }
