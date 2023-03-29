@@ -9,10 +9,10 @@
 
     <nav class="site-menu">
       <ul id="primary-menu" class="gnb__list">
-        <li class="gnb__item space-info item--wide">
+        <li class="gnb__item space-info wide">
           <a href="./spaceInfo.html">시설안내</a>
         </li>
-        <li class="gnb__item use-info item--wide">
+        <li class="gnb__item use-info wide">
           <a href="./useGuide.html">이용안내</a>
         </li>
         <li class="gnb__item book">
@@ -25,28 +25,36 @@
           <p class="user__box">
             <span class="user--icon"></span>
           </p>
-          <ul class="user--menu__list">
-            <li class="user--menu__item history item--small">
-              <a href="./spaceInfo.html">시설안내</a>
-            </li>
-            <li class="user--menu__item user-info item--small">
-              <a href="./useGuide.html">이용안내</a>
-            </li>
-            <li class="user--menu__item history">
-              <a href="./history.html">예약내역</a>
-            </li>
-            <li class="user--menu__item user-info">
-              <a href="./userInfo.html">회원정보</a>
-            </li>
-            <li class="user--menu__item logout">
-              <a href="#">로그아웃</a>
-            </li>
-          </ul>
+          <p id="moGnbBtn" class="gnb-ham">
+            <a href="javascript:void(0);"></a>
+          </p>
+          <div class="user--menu__wrap">
+            <p class="btn btn--cls">
+              <button>X</button>
+            </p>
+            <ul class="user--menu__list">
+              <li class="user--menu__item space-info mobile">
+                <a href="./spaceInfo.html">시설안내</a>
+              </li>
+              <li class="user--menu__item use-info mobile">
+                <a href="./useGuide.html">이용안내</a>
+              </li>
+              <li class="user--menu__item history">
+                <a href="./history.html">예약내역</a>
+              </li>
+              <li class="user--menu__item user-info">
+                <a href="./userInfo.html">회원정보</a>
+              </li>
+              <li class="user--menu__item logout">
+                <a href="#">로그아웃</a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>
 
-    <section class="site-menu--mo">
+    <!-- section class="site-menu--mo">
       <ul class="primary-menu--mo gnb__list--mo">
         <li class="gnb__item book">
           <a href="./spaceBook.html">예약하기</a>
@@ -92,7 +100,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section -->
   </div>
 </header>
 <script src="../public/js/jquery-3.5.1.js"></script>

@@ -7,11 +7,11 @@ $(document).ready(function () {
   function moGnbHandler(e) {
     $('#moGnbBtn').on('click', function (e) {
       e.preventDefault();
-      $('.mo-menu__box').addClass(NOWON_CLASSNAME);
+      $('.user--menu__wrap').addClass(NOWON_CLASSNAME);
     });
-    $('.mo-menu__box .btn--cls').on('click', function (e) {
+    $('.user--menu__wrap .btn--cls').on('click', function (e) {
       e.preventDefault();
-      $('.mo-menu__box').removeClass(NOWON_CLASSNAME);
+      $('.user--menu__wrap').removeClass(NOWON_CLASSNAME);
     });
   }
   moGnbHandler();
