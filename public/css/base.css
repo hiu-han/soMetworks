@@ -1008,6 +1008,9 @@ body {
   font-weight: 500;
   color: #d86845;
 }
+.content--business-addr .business-addr-img__wrap {
+  width: 16%;
+}
 .content--business-addr .business-addr-img__wrap img {
   width: 100%;
 }
