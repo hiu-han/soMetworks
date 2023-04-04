@@ -315,13 +315,13 @@ footer .logo .txt--regular {
   #primary-menu > .gnb__item.user .btn--cls {
     display: block;
     position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 30px;
-    height: 30px;
+    top: 15px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    background-image: url('../img/icon/icon-close-default.svg');
+    background-image: url('../img/icon/icon-cls-x.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
