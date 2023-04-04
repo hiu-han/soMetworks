@@ -564,7 +564,11 @@ body {
 
 .content--space-inform {
   padding: 60px 0;
-  background-color: #ebebeb;
+  background-color: #f8f8f8;
+}
+.content--space-inform.diversity {
+  background-color: rgba(255, 255, 255, 0);
+  background-color: #efefef;
 }
 .content--space-inform .content--body__box {
   display: flex;
@@ -573,6 +577,10 @@ body {
   gap: 44px;
   width: calc(100% + 140px);
   margin-left: -140px;
+}
+.content--space-inform.business-addr .content--body__box {
+  margin-left: 0;
+  margin-right: -140px;
 }
 .content--space-inform .inform-img__wrap {
   width: 66vw;
@@ -590,11 +598,18 @@ body {
   background-size: cover;
   background-position: center;
 }
+.content--space-inform.business-addr .inform-img {
+  background-image: url('../img/main/lobby.jpg');
+}
 .content--space-inform .inform-txt__wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
+}
+.content--space-inform.business-addr .inform-txt__wrap {
+  align-items: flex-end;
+  text-align: right;
 }
 .content--space-inform .inform-txt__wrap .inform__txt {
   margin-bottom: 14px;
@@ -626,6 +641,15 @@ body {
   background-color: #313131;
   color: #fff;
 }
+/* .content--space-inform.business-addr .inform__btn > a {
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+}
+.content--space-inform.business-addr .inform__btn > a:hover {
+  border: 1px solid #313131;
+  background-color: rgba(0, 0, 0, 0.7);
+} */
 
 .content--metworks-strength .content--head {
   margin-bottom: 54px;
@@ -1010,6 +1034,9 @@ body {
 }
 .content--business-addr .business-addr-img__wrap {
   width: 16%;
+  max-width: 154px;
+  padding-left: 14px;
+  margin-right: 46px;
 }
 .content--business-addr .business-addr-img__wrap img {
   width: 100%;
@@ -2111,6 +2138,10 @@ body {
     flex-wrap: unset;
     justify-content: flex-start;
   }
+  .content--space-inform.business-addr .content--body__box {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
   .content--space-inform .inform-img__wrap {
     width: 86vw;
     height: 50vw;
@@ -2392,7 +2423,8 @@ body {
   }
   .content--use-guide .book-process-img__wrap,
   .content--book-guide .book-guide-img__wrap,
-  .content--note-guide .note-guide-img__wrap {
+  .content--note-guide .note-guide-img__wrap,
+  .content--business-addr .business-addr-img__wrap {
     display: none;
   }
   .content--use-guide .book-process-img {
@@ -2413,6 +2445,16 @@ body {
   }
   .book-guide__item > span {
     font-size: 14px;
+  }
+
+  .business-addr__wrap .subs-title {
+    font-size: 16px;
+  }
+  .business-addr__wrap .subs__item {
+    font-size: 14px;
+  }
+  .business-addr__wrap .sub__list.table {
+    width: 100%;
   }
 
   .note-guide__item {
