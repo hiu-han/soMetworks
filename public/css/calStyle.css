@@ -1,0 +1,297 @@
+#stateCalendar,
+#bookCalendar,
+#stateCalendarSample {
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto;
+}
+.cal--head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30%;
+}
+.wrap-title.year-month {
+  margin-bottom: 0;
+  font-size: 30px;
+}
+.calendar-btn__wrap {
+  display: flex;
+}
+.calendar-btn__wrap > button {
+  width: 28px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  color: #616161;
+  line-height: -5px;
+  cursor: pointer;
+  font-size: 15px;
+  box-shadow: var(--boxshadow-s-obj);
+  transition: 0.2s;
+}
+.calendar-btn__wrap > button#calPrev {
+  border-radius: 5px 0 0 5px;
+  background-color: #ddd;
+}
+.calendar-btn__wrap > button#calNext {
+  border-radius: 0 5px 5px 0;
+  background-color: #ddd;
+}
+.calendar-btn__wrap > button#calToday {
+  margin: 0 2px;
+  border: 1px solid #efefef;
+  line-height: 28px;
+  background-color: #fff;
+}
+.calendar-btn__wrap > button:hover {
+  box-shadow: 1px 3px 6px rgba(88, 88, 88, 0.25);
+}
+.calendar-btn__wrap > button#calPrev:hover,
+.calendar-btn__wrap > button#calNext:hover {
+  background-color: #d6d6d6;
+}
+.calendar-btn__wrap > button#calToday:hover {
+  border: 1px solid #aaa;
+}
+#goToday,
+#calToday {
+  width: 75px;
+  border-left: var(--border-table);
+  border-right: var(--border-table);
+}
+.cal-days {
+  display: flex;
+  margin: 25px 0 10px;
+}
+.day {
+  width: calc(100% / 7);
+  text-align: center;
+}
+.cal-dates {
+  display: flex;
+  flex-flow: row wrap;
+  border-top: var(--border-table);
+  border-right: var(--border-table);
+}
+.date {
+  width: calc(100% / 7);
+  height: 100px;
+  padding: 6px;
+  text-align: right;
+  border-bottom: var(--border-table);
+  border-left: var(--border-table);
+  overflow: hidden;
+  cursor: pointer;
+}
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+  color: #d13e3e;
+}
+.day:nth-child(7n),
+.date:nth-child(7n) {
+  color: #396ee2;
+}
+.date span {
+  display: block;
+  color: #515151;
+  transition: 0.3s;
+}
+.date:hover > span {
+  font-weight: 600;
+  color: #313131;
+}
+.date .other {
+  opacity: 0.3;
+}
+.today > span {
+  position: relative;
+  color: #fff;
+}
+.today > span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-color: #ed3d3d;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/***************************/
+#stateCalendarTool {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto 24px;
+}
+.head-date__wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+#stateCalendarTool .wrap-title {
+  font-size: 24px;
+  text-align: center;
+}
+.calendar-btn__wrap {
+}
+
+.select__wrap select {
+  position: relative;
+  width: auto;
+  height: 32px;
+  padding: 0 32px 0 10px;
+  border: 1px solid #ccc;
+  background-image: url('../img/icon/icon-select-default.svg');
+  background-repeat: no-repeat;
+  background-position: 89% 50%;
+  background-size: 11px;
+}
+.select__wrap select:focus {
+  background-image: url('../img/icon/icon-select-focus.svg');
+  background-position: 89% 49%;
+}
+/* .select__wrap select::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 45%;
+  right: 18px;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid #515151;
+  border-right: 1px solid #515151;
+} */
+
+.calendar__wrap table {
+  width: 100%;
+  table-layout: fixed;
+  box-shadow: var(--boxshadow-m-obj);
+}
+.calendar__wrap thead th {
+  height: 40px;
+  border-top: 1px solid #efefef;
+  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  background-color: #efefef;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 38px;
+}
+.calendar__wrap tbody td {
+  position: relative;
+  height: 120px;
+  padding: 2px;
+  border: var(--border-table);
+  box-sizing: border-box;
+  vertical-align: top;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+  transition: 0.4s;
+}
+.calendar__wrap tbody td:hover {
+  height: inherit;
+  background-color: #f2f2f2;
+  overflow: unset;
+  z-index: 120;
+}
+.calendar__wrap thead th:first-child,
+.calendar__wrap tbody td:first-child > .date-num {
+  color: #d13e3e;
+}
+.calendar__wrap thead th:nth-child(7),
+.calendar__wrap tbody td:nth-child(7) > .date-num {
+  color: #396ee2;
+}
+.calendar__wrap tbody td > .date-num {
+  position: relative;
+  padding-right: 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: right;
+}
+.calendar__wrap tbody td:hover > .date-num {
+  font-weight: 600;
+}
+.calendar__wrap tbody td > .booked__list {
+  height: 86px;
+  padding-bottom: 8px;
+}
+.calendar__wrap tbody td:hover > .booked__list {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: auto;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #888;
+  box-shadow: var(--boxshadow-s-obj);
+  z-index: 150;
+}
+.calendar__wrap tbody td .booked__item {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 5px;
+  padding: 2px 2px 1px;
+  margin-bottom: 3px;
+  background-color: rgb(245, 159, 159);
+  font-size: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.calendar__wrap tbody td .booked__item:last-child {
+  margin-bottom: 0;
+}
+.calendar__wrap tbody td:hover .booked__item {
+  padding-left: 8px;
+}
+.calendar__wrap tbody td .booked__item.focusA {
+  background-color: rgb(248, 195, 195);
+}
+.calendar__wrap tbody td .booked__item.focusB {
+  background-color: rgb(243, 191, 165);
+}
+.calendar__wrap tbody td .booked__item.focusC {
+  background-color: rgb(243, 241, 170);
+}
+.calendar__wrap tbody td .booked__item.m1 {
+  background-color: rgb(193, 241, 156);
+}
+.calendar__wrap tbody td .booked__item.m2 {
+  background-color: rgb(163, 170, 239);
+}
+.calendar__wrap tbody td .booked__item.fgm {
+  background-color: rgb(210, 163, 239);
+}
+.calendar__wrap tbody td .booked__item.fgd {
+  background-color: rgb(241, 188, 233);
+}
+.calendar__wrap tbody td .booked__item.trainingA {
+  background-color: rgb(172, 223, 240);
+}
+.calendar__wrap tbody td .booked__item.trainingB {
+  background-color: rgb(172, 240, 229);
+}
+.calendar__wrap tbody td .booked__item > .item-time {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.calendar__wrap tbody td .booked__item > .item-name {
+  font-weight: 600;
+}

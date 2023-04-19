@@ -14,6 +14,8 @@
   --boxshadow-m-obj: 1px 3px 8px rgba(0, 0, 0, 0.2);
   --boxshadow-m-focus: 1px 3px 8px rgba(0, 0, 0, 0.3);
   --boxshadow-s-obj: 1px 3px 6px rgba(88, 88, 88, 0.15);
+
+  --border-table: 1px solid #ccc;
 }
 
 /*** MAIN ***/
@@ -813,6 +815,12 @@ body {
 .page-title {
   font-size: 25px;
   font-weight: 700;
+}
+.page-title + .txt-info {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 /** CONTENT -> use guide page **/
