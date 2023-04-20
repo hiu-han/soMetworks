@@ -1,94 +1,97 @@
 $(document).ready(function () {
   let date = new Date();
 
-  const renderCalendar = () => {
-    const viewYear = date.getFullYear();
-    const viewMonth = date.getMonth();
+  function stateCalendar() {
+    const calendarYear = date.getFullYear(),
+      calendarMonth = date.getMonth() + 1,
+      calendarToday = date.getDate();
 
-    // year-month
-    document.querySelector('.year-month').textContent = `${viewYear}년 ${
-      viewMonth + 1
-    }월`;
+    const monthLastDate = new Date(calendarYear, calendarMonth, 0);
+    // 달력 월의 마지막 일
+    const calendarMonthLastDate = monthLastDate.getDate();
 
-    // 지난 달 마지막 Date, 이번 달 마지막 Date
-    const prevLast = new Date(viewYear, viewMonth, 0);
-    const thisLast = new Date(viewYear, viewMonth + 1, 0);
+    const monthStartDay = new Date(calendarYear, date.getMonth(), 1);
+    // 달력 월의 시작 요일
+    const calendarMonthStartDay = monthStartDay.getDay();
 
-    const PLDate = prevLast.getDate();
-    const PLDay = prevLast.getDay();
+    // 주 카운트
+    const calendarWeekCount = Math.ceil(
+      (calendarMonthStartDay + calendarMonthLastDate) / 7
+    );
 
-    const TLDate = thisLast.getDate();
-    const TLDay = thisLast.getDay();
+    // 현재 보고 있는 년 월 표기
+    document.querySelector(
+      '.year-month'
+    ).textContent = `${calendarYear}년 ${calendarMonth}월`;
 
-    // Date 기본 배열
-    const prevDates = [];
-    const thisDates = [...Array(TLDate + 1).keys()].slice(1);
-    const nextDates = [];
+    let today = new Date();
 
-    // prevDates 계샨
-    if (PLDay !== 6) {
-      for (let i = 0; i < PLDay + 1; i++) {
-        prevDates.unshift(PLDate - i);
-      }
-    }
+    let html = '';
+    html += '<table>';
+    html += '<thead>';
+    html += '<tr>';
+    html +=
+      '<th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>';
+    html += '</tr>';
+    html += '</thead>';
+    html += '<tbody>';
+    // 위치
+    let calendarPos = 0;
+    // 날짜
+    let calendarDay = 0;
+    for (let i = 0; i < calendarWeekCount; i++) {
+      html += '<tr>';
+      for (let j = 0; j < 7; j++) {
+        html += '<td>';
+        if (
+          calendarMonthStartDay <= calendarPos &&
+          calendarDay < calendarMonthLastDate
+        ) {
+          calendarDay++;
+          html += `<p class="date-num`;
 
-    // nextDates 계산
-    for (let i = 1; i < 7 - TLDay; i++) {
-      nextDates.push(i);
-    }
-
-    // Dates 합치기
-    const dates = prevDates.concat(thisDates, nextDates);
-
-    const firstDateIndex = dates.indexOf(1);
-    const lastDateIndex = dates.lastIndexOf(TLDate);
-
-    // Dates 정리
-    dates.forEach((date, i) => {
-      const condition =
-        i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other';
-      dates[
-        i
-      ] = `<p class="date"><span class="${condition}">${date}</span></p>`;
-    });
-
-    // Dates 그리기
-    document.querySelector('.cal-dates').innerHTML = dates.join('');
-
-    const today = new Date();
-    if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
-      for (let dates of document.querySelectorAll('.this')) {
-        if (+dates.innerText === today.getDate()) {
-          dates.classList.add('today');
-          break;
+          // 오늘 날짜 체크
+          if (
+            calendarYear == today.getFullYear() &&
+            calendarMonth == today.getMonth() + 1 &&
+            calendarDay == today.getDate()
+          ) {
+            html += ` today`;
+          }
+          html += `"><span>${calendarDay}</span></p>`;
         }
+        html += '</td>';
+        calendarPos++;
       }
+      html += '</tr>';
     }
-  };
+    html += '</tbody>';
+    html += '</table>';
+    $('#stateCalendar').html(html);
+  }
+  stateCalendar();
 
-  renderCalendar();
-
+  // 전월로
   const prevMonth = () => {
     date.setDate(1);
     date.setMonth(date.getMonth() - 1);
-    renderCalendar();
+    stateCalendar();
   };
 
+  // 명월로
   const nextMonth = () => {
     date.setDate(1);
     date.setMonth(date.getMonth() + 1);
-    renderCalendar();
+    stateCalendar();
   };
 
+  // 오늘로
   const goToday = () => {
     date = new Date();
-    renderCalendar();
+    stateCalendar();
   };
-  function hel() {
-    console.log('1');
-  }
 
-  $('#calendarPrev').on('click', prevMonth);
-  $('#goToday').on('click', goToday);
-  $('#calendarNext').on('click', nextMonth);
+  $('#calPrev').on('click', prevMonth);
+  $('#calNext').on('click', nextMonth);
+  $('#calToday').on('click', goToday);
 });
