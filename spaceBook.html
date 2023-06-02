@@ -136,6 +136,21 @@
                             <input type="text" placeholder="이용 시간을 선택해주세요">
                           </label>
                         </div>
+                        <div class="book-input useWhen">
+                          <div class="book-input">
+                            <h6 class="book-input--name">시작 날짜 선택</h6>
+                            <label class="input-item">
+                              <input type="date" id="startDate">
+                            </label>
+                          </div>
+                          <div class="book-input">
+                            <h6 class="book-input--name">종료 날짜 선택</h6>
+                            <label class="input-item">
+                              <input type="date" id="endDate">
+                            </label>
+                          </div>
+                          <div onclick="calculateTotal()">계산</div>
+                        </div>
                         <div class="book-input optionSelect">
                           <h6 class="book-input--name">장비 대여 및 옵션</h6>
                           <div class="input-item">
@@ -157,6 +172,24 @@
                           </label>
                         </div>
                       </fieldset>
+                    </div>
+
+                    <div class="book-total__wrap days">
+                      <h5 class="wrap-title">결제 정보</h5>
+                      <ul class="book-total__list">
+                        <li class="book-total__item spacePrice">
+                          <span class="item--name">총 이용 일수</span>
+                          <span class="item--num" id="totalDayCount"></span>
+                        </li>
+                        <li class="book-total__item totalTime">
+                          <span class="item--name">기간별 이용 현황(임시)</span>
+                          <span class="item--num" id="totalDays"></span>
+                        </li>
+                        <li class="book-total__item totalPrice">
+                          <span class="item--name">총 이용 금액</span>
+                          <span class="item--num" id="totalDayCharge"></span>
+                        </li>
+                      </ul>
                     </div>
 
                     <div class="book-total__wrap">
@@ -218,6 +251,74 @@
   <script src="./public/js/include.js"></script>
   <script src="./public/js/index.js"></script>
   <script src="./public/js/modal.js"></script>
+
+  <script>
+    function calculateTotal() {
+      const calculateDateDifference = function () {
+        const startDateInput = document.getElementById("startDate");
+        const endDateInput = document.getElementById("endDate");
+
+        const startDate = new Date(startDateInput.value);
+        const endDate = new Date(endDateInput.value);
+
+        const timeDifference = endDate.getTime() - startDate.getTime();
+        days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        console.log("일 수 차이: " + days);
+
+        return days++;
+      }
+      let day = calculateDateDifference();
+      console.log(days);
+
+      ///////////////////////////////////
+
+      function calculateDivision(number, a, b) {
+        const resultA = Math.floor(number / a);
+        const remainderA = number % a;
+
+        const resultB = Math.floor(remainderA / b);
+        const remainderB = remainderA % b;
+
+        return {
+          resultA,
+          remainderA,
+          resultB,
+          remainderB
+        };
+      }
+
+      // const number = 150; // 변수로 지정된 숫자
+      // const a = 30; // 상수 a
+      // const b = 7; // 상수 b
+      // const number = days;
+      const numM = 30; // 상수 a
+      const numW = 7; // 상수 b
+
+      const { resultA, remainderA, resultB, remainderB } = calculateDivision(days, numM, numW);
+
+      const costM = 270000,
+        costW = 69000,
+        costD = 11000;
+
+      const totalDayCharge = resultA * costM + resultB * costW + costD * remainderB;
+      const totalDayResult = totalDayCharge.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      console.log("resultA:", resultA);
+      console.log("remainderA:", remainderA);
+      console.log("resultB:", resultB);
+      console.log("remainderB:", remainderB);
+      console.log(`${totalDayCharge}원`);
+
+      const $totalDayCount = document.getElementById('totalDayCount'),
+        $totalDays = document.getElementById('totalDays'),
+        $totalDayCharge = document.getElementById('totalDayCharge');
+
+      $totalDayCount.innerText = `${days}일`;
+      $totalDays.innerText = `월(30일 기준) : ${resultA} / 주 : ${resultB} / 일 : ${remainderB}`;
+      $totalDayCharge.innerText = `${totalDayResult}원`;
+    }
+  </script>
 </body>
 
 </html>
