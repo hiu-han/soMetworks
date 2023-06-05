@@ -118,39 +118,53 @@
                             <span class="item-price"><em>시간당</em><strong>10,000</strong><em>원</em></span>
                           </p>
                         </div>
-                        <div class="book-input enterPw">
-                          <h6 class="book-input--name">출입 비밀번호</h6>
-                          <label class="input-item">
-                            <input type="password" placeholder="숫자 4자리를 입력해주세요">
-                          </label>
-                        </div>
-                        <div class="book-input useDate">
-                          <h6 class="book-input--name">이용 날짜 선택</h6>
-                          <label class="input-item">
-                            <input type="date">
-                          </label>
-                        </div>
-                        <div class="book-input useTime">
-                          <h6 class="book-input--name">이용 시간 선택</h6>
-                          <label class="input-item" id="timeSelector">
-                            <input type="text" placeholder="이용 시간을 선택해주세요">
-                          </label>
-                        </div>
+
                         <div class="book-input useWhen">
-                          <div class="book-input">
-                            <h6 class="book-input--name">시작 날짜 선택</h6>
-                            <label class="input-item">
-                              <input type="date" id="startDate">
-                            </label>
+                          <div class="book-input--head">
+                            <div class="head-tap__wrap">
+                              <ul class="head-tap__list">
+                                <li class="head-tap__item">
+                                  <p class="head-tap">시간별</p>
+                                </li>
+                                <li class="head-tap__item nowOn">
+                                  <p class="head-tap">기간별</p>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
-                          <div class="book-input">
-                            <h6 class="book-input--name">종료 날짜 선택</h6>
-                            <label class="input-item">
-                              <input type="date" id="endDate">
-                            </label>
+                          <div class="book-input--body">
+                            <div class="book-input__sub useDaily">
+                              <div class="book-input__item useDate">
+                                <h6 class="book-input--name">이용 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date">
+                                </label>
+                              </div>
+                              <div class="book-input__item useTime">
+                                <h6 class="book-input--name">이용 시간 선택</h6>
+                                <label class="input-item" id="timeSelector">
+                                  <input type="text" placeholder="이용 시간을 선택해주세요">
+                                </label>
+                              </div>
+                            </div>
+                            <div class="book-input__sub useMonthly nowOn">
+                              <div class="book-input__item useDayStart">
+                                <h6 class="book-input--name">시작 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date" id="startDate">
+                                </label>
+                              </div>
+                              <div class="book-input__item useDayEnd">
+                                <h6 class="book-input--name">종료 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date" id="endDate">
+                                </label>
+                              </div>
+                              <div class="btn--calc" onclick="calculateTotal()">계산</div>
+                            </div>
                           </div>
-                          <div onclick="calculateTotal()">계산</div>
                         </div>
+
                         <div class="book-input optionSelect">
                           <h6 class="book-input--name">장비 대여 및 옵션</h6>
                           <div class="input-item">
@@ -169,6 +183,12 @@
                           <h6 class="book-input--name">이용 목적</h6>
                           <label class="input-item">
                             <input type="text" placeholder="예) 업무, 교육, 스터디 등">
+                          </label>
+                        </div>
+                        <div class="book-input enterPw">
+                          <h6 class="book-input--name">출입 비밀번호</h6>
+                          <label class="input-item">
+                            <input type="password" placeholder="숫자 4자리를 입력해주세요">
                           </label>
                         </div>
                       </fieldset>
@@ -192,7 +212,7 @@
                       </ul>
                     </div>
 
-                    <div class="book-total__wrap">
+                    <!-- <div class="book-total__wrap">
                       <h5 class="wrap-title">결제 정보</h5>
                       <ul class="book-total__list">
                         <li class="book-total__item spacePrice">
@@ -212,7 +232,7 @@
                           <span class="item--num">50,000<em>원</em></span>
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
 
                     <div class="book-submit__wrap">
                       <fieldset>

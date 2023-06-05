@@ -1556,6 +1556,58 @@ body {
   text-align: left;
 }
 
+.book-input.useWhen {
+  margin-top: 8px;
+}
+.book-input.useWhen .head-tap__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0px;
+}
+.book-input.useWhen .head-tap__item {
+  position: relative;
+  width: 50%;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+.book-input.useWhen .head-tap__item .head-tap {
+  width: 100%;
+  font-weight: 500;
+  color: #aaa;
+  line-height: 3;
+  text-align: center;
+}
+.book-input.useWhen .head-tap__item.nowOn {
+  background-color: rgba(255, 255, 255, 0);
+}
+.book-input.useWhen .head-tap__item.nowOn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #313131;
+}
+.book-input.useWhen .head-tap__item.nowOn .head-tap {
+  color: #313131;
+}
+.book-input.useWhen .book-input__sub {
+  display: none;
+  padding: 16px 10px;
+}
+.book-input.useWhen .book-input__sub.nowOn {
+  display: block;
+}
+.book-input.useWhen .book-input__item {
+  margin-bottom: 14px;
+}
+.book-input.useWhen .btn--calc {
+  cursor: pointer;
+}
+
 .book-total__wrap {
   padding-top: 24px;
   margin: 14px 0 30px;
