@@ -1557,7 +1557,7 @@ body {
 }
 
 .book-input.useWhen {
-  margin-top: 8px;
+  margin-top: 24px;
 }
 .book-input.useWhen .head-tap__list {
   display: flex;

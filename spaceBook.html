@@ -151,16 +151,17 @@
                               <div class="book-input__item useDayStart">
                                 <h6 class="book-input--name">시작 날짜 선택</h6>
                                 <label class="input-item">
-                                  <input type="date" id="startDate">
+                                  <input type="date" id="startDate" pattern="\d{4}-\d{2}-\d{2}">
                                 </label>
                               </div>
                               <div class="book-input__item useDayEnd">
                                 <h6 class="book-input--name">종료 날짜 선택</h6>
                                 <label class="input-item">
-                                  <input type="date" id="endDate">
+                                  <input type="date" id="endDate" onchange="calculateTotal()"
+                                    pattern="\d{4}-\d{2}-\d{2}">
                                 </label>
                               </div>
-                              <div class="btn--calc" onclick="calculateTotal()">계산</div>
+                              <!-- <div class="btn--calc" onclick="calculateTotal()">계산</div> -->
                             </div>
                           </div>
                         </div>
