@@ -14,7 +14,6 @@
   <title>Metworks|공유오피스</title>
 
   <script src="./public/js/jquery-3.5.1.js"></script>
-  <!-- <script src="./public/js/bookCalendar.js"></script> -->
 
   <link rel="stylesheet" href="./public/css/style.css">
   <link rel="stylesheet" href="./public/css/calStyle.css">
@@ -47,6 +46,7 @@
                 <div class="book-state__box">
                   <div id="stateCalendarTool" class="calendar-head">
                     <div class="head-date__wrap">
+                      <!-- 현재 년 월 표기 -->
                       <h5 class="wrap-title year-month">2023년 4월</h5>
                       <div class="calendar-btn__wrap">
                         <button id="calPrev">&lt;</button>
@@ -54,6 +54,7 @@
                         <button id="calNext">&gt;</button>
                       </div>
                     </div>
+                    <!-- 룸 선택 셀렉트 박스 -->
                     <div class="select__wrap select--room">
                       <select name="" id="roomSelect">
                         <option value="">전체 룸 검색</option>
@@ -85,10 +86,11 @@
                       </select>
                     </div>
                   </div>
+                  <!-- 동작하는 달력 -->
                   <div id="stateCalendar" class="real calendar__wrap"></div>
 
-                  <div id="stateCalendarSample" class="calendar__wrap">
-                    <!-- <div id="stateCalendarSample" class="calendar__wrap"> -->
+                  <!-- 달력 활용안 샘플 -->
+                  <div id="stateCalendarSample" class="calendar__wrap" style="margin-top:60px;">
                     <table>
                       <colgroup>
                         <col style="width:14.2%;">
@@ -129,12 +131,16 @@
                           </td>
                           <td class="cal-date">
                             <p class="date-num"><span>1</span></p>
+                            <!-- .booked__list 예약된 리스트 / 마우스오버 시 absolute적용되며 전체 리스트 노출됨 -->
                             <div class="booked__list">
+                              <!-- .booked__item 예약된 아이템 + .focusA 등의 예약된 룸 className -->
                               <p class="booked__item focusA">
+                                <!-- .item-time 예약된 시간 -->
                                 <span class="item-time">
                                   <em class="time--start">10:00</em> ~
                                   <em class="time--end">12:00</em>
                                 </span>
+                                <!-- .item-name 예약된 룸 -->
                                 <span class="item-name">FocusA</span>
                               </p>
                               <p class="booked__item trainingA">
@@ -297,6 +303,22 @@
                           </td>
                           <td class="cal-date">
                             <p class="date-num"><span>19</span></p>
+                            <div class="booked__list">
+                              <p class="booked__item open">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">14:00</em>
+                                </span>
+                                <span class="item-name">Open</span>
+                              </p>
+                              <p class="booked__item wZone">
+                                <span class="item-time">
+                                  <em class="time--start">10:00</em> ~
+                                  <em class="time--end">14:00</em>
+                                </span>
+                                <span class="item-name">W01</span>
+                              </p>
+                            </div>
                           </td>
                           <td class="cal-date">
                             <p class="date-num today"><span>20</span></p>
@@ -359,32 +381,7 @@
 
                       </tbody>
                     </table>
-
                   </div>
-
-                  <!-- div id="bookCalendar" class="calendar__wrap">
-                    <div class="cal--head">
-                      <h5 class="wrap-title year-month"></h5>
-                      <div class="calendar-btn__wrap">
-                        <button id="calendarPrev" onclick="prevMonth()">&lt;</button>
-                        <button id="calendarPrev">&lt;</button>
-                        <button id="goToday">today</button>
-                        <button id="calendarNext">&gt;</button>
-                      </div>
-                    </div>
-                    <div class="cal--body">
-                      <div class="cal-days">
-                        <p class="day sun">일</p>
-                        <p class="day mon">월</p>
-                        <p class="day tue">화</p>
-                        <p class="day wed">수</p>
-                        <p class="day thu">목</p>
-                        <p class="day fri">금</p>
-                        <p class="day sat">토</p>
-                      </div>
-                      <div class="cal-dates"></div>
-                    </div>
-                  </div -->
                 </div>
               </div>
             </div>
@@ -404,9 +401,7 @@
   <script src="./public/js/include.js"></script>
   <script src="./public/js/index.js"></script>
   <script src="./public/js/modal.js"></script>
-  <!-- <script src="./public/js/stateCalendar.js"></script> -->
-  <!-- <script src="./public/js/bookCalendar.js"></script> -->
-  <script src="./public/js/bookCalendar2.js"></script>
+  <script src="./public/js/bookCalendar.js"></script>
 </body>
 
 </html>

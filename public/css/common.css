@@ -153,6 +153,23 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
   color: #ccc;
 }
 
+/** COMMON -> SELECT WRAP **/
+.select__wrap select {
+  position: relative;
+  width: auto;
+  height: 32px;
+  padding: 0 32px 0 10px;
+  border: 1px solid #ccc;
+  background-image: url('../img/icon/icon-select-default.svg');
+  background-repeat: no-repeat;
+  background-position: 89% 50%;
+  background-size: 11px;
+}
+.select__wrap select:focus {
+  background-image: url('../img/icon/icon-select-focus.svg');
+  background-position: 89% 49%;
+}
+
 /** COMMON -> ACCEPT INPUT **/
 .accept-input {
   display: block;

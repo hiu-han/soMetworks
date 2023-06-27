@@ -1,20 +1,30 @@
 #stateCalendar,
-#bookCalendar,
 #stateCalendarSample {
   width: 100%;
   max-width: 1048px;
   margin: 0 auto;
 }
-.cal--head {
+#stateCalendarTool {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 30%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto 24px;
 }
-.wrap-title.year-month {
+.head-date__wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+#stateCalendarTool .wrap-title {
+  font-size: 24px;
+  text-align: center;
   margin-bottom: 0;
-  font-size: 30px;
 }
+
 .calendar-btn__wrap {
   display: flex;
 }
@@ -54,124 +64,11 @@
 .calendar-btn__wrap > button#calToday:hover {
   border: 1px solid #aaa;
 }
-#goToday,
 #calToday {
   width: 75px;
   border-left: var(--border-table);
   border-right: var(--border-table);
 }
-.cal-days {
-  display: flex;
-  margin: 25px 0 10px;
-}
-.day {
-  width: calc(100% / 7);
-  text-align: center;
-}
-.cal-dates {
-  display: flex;
-  flex-flow: row wrap;
-  border-top: var(--border-table);
-  border-right: var(--border-table);
-}
-.date {
-  width: calc(100% / 7);
-  height: 100px;
-  padding: 6px;
-  text-align: right;
-  border-bottom: var(--border-table);
-  border-left: var(--border-table);
-  overflow: hidden;
-  cursor: pointer;
-}
-.day:nth-child(7n + 1),
-.date:nth-child(7n + 1) {
-  color: #d13e3e;
-}
-.day:nth-child(7n),
-.date:nth-child(7n) {
-  color: #396ee2;
-}
-.date span {
-  display: block;
-  color: #515151;
-  transition: 0.3s;
-}
-.date:hover > span {
-  font-weight: 600;
-  color: #313131;
-}
-.date .other {
-  opacity: 0.3;
-}
-.today > span {
-  position: relative;
-  color: #fff;
-}
-.today > span::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  transform: translate(-50%, -50%);
-  background-color: #ed3d3d;
-  border-radius: 50%;
-  z-index: -1;
-}
-
-/***************************/
-#stateCalendarTool {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  gap: 24px;
-  width: 100%;
-  max-width: 1048px;
-  margin: 0 auto 24px;
-}
-.head-date__wrap {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 24px;
-}
-#stateCalendarTool .wrap-title {
-  font-size: 24px;
-  text-align: center;
-}
-.calendar-btn__wrap {
-}
-
-.select__wrap select {
-  position: relative;
-  width: auto;
-  height: 32px;
-  padding: 0 32px 0 10px;
-  border: 1px solid #ccc;
-  background-image: url('../img/icon/icon-select-default.svg');
-  background-repeat: no-repeat;
-  background-position: 89% 50%;
-  background-size: 11px;
-}
-.select__wrap select:focus {
-  background-image: url('../img/icon/icon-select-focus.svg');
-  background-position: 89% 49%;
-}
-/* .select__wrap select::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 45%;
-  right: 18px;
-  transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
-  border-top: 1px solid #515151;
-  border-right: 1px solid #515151;
-} */
 
 .calendar__wrap table {
   width: 100%;
@@ -223,6 +120,23 @@
 }
 .calendar__wrap tbody td:hover > .date-num {
   font-weight: 600;
+}
+.today > span {
+  position: relative;
+  color: #fff;
+}
+.today > span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-color: #ed3d3d;
+  border-radius: 50%;
+  z-index: -1;
 }
 .calendar__wrap tbody td > .booked__list {
   height: 86px;
@@ -285,6 +199,12 @@
 }
 .calendar__wrap tbody td .booked__item.trainingB {
   background-color: rgb(172, 240, 229);
+}
+.calendar__wrap tbody td .booked__item.open {
+  background-color: rgb(187, 169, 238);
+}
+.calendar__wrap tbody td .booked__item.wZone {
+  background-color: rgb(221, 221, 221);
 }
 .calendar__wrap tbody td .booked__item > .item-time {
   display: flex;

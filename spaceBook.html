@@ -118,24 +118,54 @@
                             <span class="item-price"><em>시간당</em><strong>10,000</strong><em>원</em></span>
                           </p>
                         </div>
-                        <div class="book-input enterPw">
-                          <h6 class="book-input--name">출입 비밀번호</h6>
-                          <label class="input-item">
-                            <input type="password" placeholder="숫자 4자리를 입력해주세요">
-                          </label>
+
+                        <div class="book-input useWhen">
+                          <div class="book-input--head">
+                            <div class="head-tap__wrap">
+                              <ul class="head-tap__list">
+                                <li class="head-tap__item">
+                                  <p class="head-tap">시간별</p>
+                                </li>
+                                <li class="head-tap__item nowOn">
+                                  <p class="head-tap">기간별</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="book-input--body">
+                            <div class="book-input__sub useDaily">
+                              <div class="book-input__item useDate">
+                                <h6 class="book-input--name">이용 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date">
+                                </label>
+                              </div>
+                              <div class="book-input__item useTime">
+                                <h6 class="book-input--name">이용 시간 선택</h6>
+                                <label class="input-item" id="timeSelector">
+                                  <input type="text" placeholder="이용 시간을 선택해주세요">
+                                </label>
+                              </div>
+                            </div>
+                            <div class="book-input__sub useMonthly nowOn">
+                              <div class="book-input__item useDayStart">
+                                <h6 class="book-input--name">시작 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date" id="startDate" pattern="\d{4}-\d{2}-\d{2}">
+                                </label>
+                              </div>
+                              <div class="book-input__item useDayEnd">
+                                <h6 class="book-input--name">종료 날짜 선택</h6>
+                                <label class="input-item">
+                                  <input type="date" id="endDate" onchange="calculateTotal()"
+                                    pattern="\d{4}-\d{2}-\d{2}">
+                                </label>
+                              </div>
+                              <!-- <div class="btn--calc" onclick="calculateTotal()">계산</div> -->
+                            </div>
+                          </div>
                         </div>
-                        <div class="book-input useDate">
-                          <h6 class="book-input--name">이용 날짜 선택</h6>
-                          <label class="input-item">
-                            <input type="date">
-                          </label>
-                        </div>
-                        <div class="book-input useTime">
-                          <h6 class="book-input--name">이용 시간 선택</h6>
-                          <label class="input-item" id="timeSelector">
-                            <input type="text" placeholder="이용 시간을 선택해주세요">
-                          </label>
-                        </div>
+
                         <div class="book-input optionSelect">
                           <h6 class="book-input--name">장비 대여 및 옵션</h6>
                           <div class="input-item">
@@ -156,10 +186,34 @@
                             <input type="text" placeholder="예) 업무, 교육, 스터디 등">
                           </label>
                         </div>
+                        <div class="book-input enterPw">
+                          <h6 class="book-input--name">출입 비밀번호</h6>
+                          <label class="input-item">
+                            <input type="password" placeholder="숫자 4자리를 입력해주세요">
+                          </label>
+                        </div>
                       </fieldset>
                     </div>
 
-                    <div class="book-total__wrap">
+                    <div class="book-total__wrap days">
+                      <h5 class="wrap-title">결제 정보</h5>
+                      <ul class="book-total__list">
+                        <li class="book-total__item spacePrice">
+                          <span class="item--name">총 이용 일수</span>
+                          <span class="item--num" id="totalDayCount"></span>
+                        </li>
+                        <li class="book-total__item totalTime">
+                          <span class="item--name">기간별 이용 현황(임시)</span>
+                          <span class="item--num" id="totalDays"></span>
+                        </li>
+                        <li class="book-total__item totalPrice">
+                          <span class="item--name">총 이용 금액</span>
+                          <span class="item--num" id="totalDayCharge"></span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- <div class="book-total__wrap">
                       <h5 class="wrap-title">결제 정보</h5>
                       <ul class="book-total__list">
                         <li class="book-total__item spacePrice">
@@ -179,7 +233,7 @@
                           <span class="item--num">50,000<em>원</em></span>
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
 
                     <div class="book-submit__wrap">
                       <fieldset>
@@ -218,6 +272,76 @@
   <script src="./public/js/include.js"></script>
   <script src="./public/js/index.js"></script>
   <script src="./public/js/modal.js"></script>
+
+  <script>
+    function calculateTotal() {
+      const calculateDateDifference = function () {
+        const startDateInput = document.getElementById("startDate");
+        const endDateInput = document.getElementById("endDate");
+
+        const startDate = new Date(startDateInput.value);
+        const endDate = new Date(endDateInput.value);
+
+        const timeDifference = endDate.getTime() - startDate.getTime();
+        days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        console.log("일 수 차이: " + days);
+        console.log(startDateInput.value);
+        console.log(endDateInput.value);
+
+        return days++;
+      }
+      let day = calculateDateDifference();
+      console.log(days);
+
+      ///////////////////////////////////
+
+      function calculateDivision(number, a, b) {
+        const resultA = Math.floor(number / a);
+        const remainderA = number % a;
+
+        const resultB = Math.floor(remainderA / b);
+        const remainderB = remainderA % b;
+
+        return {
+          resultA,
+          remainderA,
+          resultB,
+          remainderB
+        };
+      }
+
+      // const number = 150; // 변수로 지정된 숫자
+      // const a = 30; // 상수 a
+      // const b = 7; // 상수 b
+      // const number = days;
+      const numM = 30; // 상수 a
+      const numW = 7; // 상수 b
+
+      const { resultA, remainderA, resultB, remainderB } = calculateDivision(days, numM, numW);
+
+      const costM = 270000,
+        costW = 69000,
+        costD = 11000;
+
+      const totalDayCharge = resultA * costM + resultB * costW + costD * remainderB;
+      const totalDayResult = totalDayCharge.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+      console.log("resultA:", resultA);
+      console.log("remainderA:", remainderA);
+      console.log("resultB:", resultB);
+      console.log("remainderB:", remainderB);
+      console.log(`${totalDayCharge}원`);
+
+      const $totalDayCount = document.getElementById('totalDayCount'),
+        $totalDays = document.getElementById('totalDays'),
+        $totalDayCharge = document.getElementById('totalDayCharge');
+
+      $totalDayCount.innerText = `${days}일`;
+      $totalDays.innerText = `월(30일 기준) : ${resultA} / 주 : ${resultB} / 일 : ${remainderB}`;
+      $totalDayCharge.innerText = `${totalDayResult}원`;
+    }
+  </script>
 </body>
 
 </html>
