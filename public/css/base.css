@@ -2037,7 +2037,7 @@ body {
   border-bottom: none;
 }
 
-/** MAIN -> link page **/
+/** MAIN -> LINK page **/
 #main.link-page {
   display: flex;
   flex-direction: column;
@@ -2050,9 +2050,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-#main.link-page .wrapper {
-  /* background-color: rgb(244, 244, 244); */
 }
 #main.link-page .page-title.logo {
   width: 240px;
@@ -2068,7 +2065,6 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  /* gap: 64px; */
 }
 #main.link-page .link-btn__item {
   position: relative;
@@ -2081,11 +2077,9 @@ body {
   box-sizing: border-box;
 }
 #main.link-page .link-btn__item * {
-  transition: 0.4s;
+  transition: 0.4s ease-in;
 }
 #main.link-page .link-btn__item:hover {
-  margin-top: -1px;
-  margin-left: -1px;
   border: 2px solid transparent;
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to right, #39ed75be, #3cecccaa, #25b6efaa);
@@ -2093,7 +2087,7 @@ body {
   background-clip: content-box, border-box;
 }
 #main.link-page .link-btn__item .btn-txt__box {
-  padding: 24px 24px;
+  padding: 24px;
 }
 #main.link-page .link-btn__item .txt--name {
   font-size: 15px;
@@ -2109,9 +2103,8 @@ body {
   margin: 14px 0 0;
   background-image: url('../img/main/img-metworks.svg');
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: contain;
   background-position: center;
-  transition: 0.4s;
 }
 #main.link-page .link-btn__item.sometworks .txt--img {
   background-image: url('../img/main/img-sometworks.svg');
@@ -2124,7 +2117,6 @@ body {
   margin-top: 16px;
   font-size: 15px;
   color: #666;
-  transition: 0.4s;
 }
 #main.link-page .link-btn__item .txt--go-link::before {
   content: '';
@@ -2140,7 +2132,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 0.4s;
 }
 #main.link-page .link-btn__item:hover .txt--go-link {
   color: #313131;
@@ -2752,7 +2743,7 @@ body {
     gap: 24px;
   }
   #main.link-page .link-btn__item .btn-txt__box {
-    padding: 18px 18px;
+    padding: 18px;
   }
   #main.link-page .link-btn__item .txt--img {
     display: none;
