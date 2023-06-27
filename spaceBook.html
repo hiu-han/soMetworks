@@ -151,7 +151,8 @@
                               <div class="book-input__item useDayStart">
                                 <h6 class="book-input--name">시작 날짜 선택</h6>
                                 <label class="input-item">
-                                  <input type="date" id="startDate" pattern="\d{4}-\d{2}-\d{2}">
+                                  <input type="date" id="startDate" onchange="handleStartDateChange()"
+                                    pattern="\d{4}-\d{2}-\d{2}">
                                 </label>
                               </div>
                               <div class="book-input__item useDayEnd">
@@ -274,72 +275,99 @@
   <script src="./public/js/modal.js"></script>
 
   <script>
+
+    const startDateInput = document.getElementById("startDate");
+    const endDateInput = document.getElementById("endDate");
+
+    // const startDate = new Date(startDateInput.value);
+    // const endDate = new Date(endDateInput.value);
+
+    function handleStartDateChange() {
+      const startDate = new Date(startDateInput.value);
+      const endDate = new Date(endDateInput.value);
+
+      const minEndDate = new Date(startDate.getTime() + (29 * 24 * 60 * 60 * 1000));
+      if (endDate < minEndDate) {
+        endDateInput.value = "";
+      }
+
+      if (endDate < startDate) {
+        endDateInput.value = startDateInput.value;
+      }
+
+      endDateInput.min = minEndDate.toISOString().slice(0, 10);
+    }
+
     function calculateTotal() {
-      const calculateDateDifference = function () {
-        const startDateInput = document.getElementById("startDate");
-        const endDateInput = document.getElementById("endDate");
+      if (startDateInput.value === '') {
+        alert('시작 날짜를 선택해 주세요.');
+      } else {
+        const calculateDateDifference = function () {
+          // const startDateInput = document.getElementById("startDate");
+          // const endDateInput = document.getElementById("endDate");
 
-        const startDate = new Date(startDateInput.value);
-        const endDate = new Date(endDateInput.value);
+          const startDate = new Date(startDateInput.value);
+          const endDate = new Date(endDateInput.value);
 
-        const timeDifference = endDate.getTime() - startDate.getTime();
-        days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const timeDifference = endDate.getTime() - startDate.getTime();
+          days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-        console.log("일 수 차이: " + days);
-        console.log(startDateInput.value);
-        console.log(endDateInput.value);
+          console.log("일 수 차이: " + days);
+          console.log(startDateInput.value);
+          console.log(endDateInput.value);
 
-        return days++;
+          return days++;
+        }
+        let day = calculateDateDifference();
+        console.log(days);
+
+        ///////////////////////////////////
+
+        function calculateDivision(number, a, b) {
+          const resultA = Math.floor(number / a);
+          const remainderA = number % a;
+
+          const resultB = Math.floor(remainderA / b);
+          const remainderB = remainderA % b;
+
+          return {
+            resultA,
+            remainderA,
+            resultB,
+            remainderB
+          };
+        }
+
+        // const number = 150; // 변수로 지정된 숫자
+        // const a = 30; // 상수 a
+        // const b = 7; // 상수 b
+        // const number = days;
+        const numM = 30; // 상수 a
+        const numW = 7; // 상수 b
+
+        const { resultA, remainderA, resultB, remainderB } = calculateDivision(days, numM, numW);
+
+        const costM = 270000,
+          costW = 69000,
+          costD = 11000;
+
+        const totalDayCharge = resultA * costM + resultB * costW + costD * remainderB;
+        const totalDayResult = totalDayCharge.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+        console.log("resultA:", resultA);
+        console.log("remainderA:", remainderA);
+        console.log("resultB:", resultB);
+        console.log("remainderB:", remainderB);
+        console.log(`${totalDayCharge}원`);
+
+        const $totalDayCount = document.getElementById('totalDayCount'),
+          $totalDays = document.getElementById('totalDays'),
+          $totalDayCharge = document.getElementById('totalDayCharge');
+
+        $totalDayCount.innerText = `${days}일`;
+        $totalDays.innerText = `월(30일 기준) : ${resultA} / 주 : ${resultB} / 일 : ${remainderB}`;
+        $totalDayCharge.innerText = `${totalDayResult}원`;
       }
-      let day = calculateDateDifference();
-      console.log(days);
-
-      ///////////////////////////////////
-
-      function calculateDivision(number, a, b) {
-        const resultA = Math.floor(number / a);
-        const remainderA = number % a;
-
-        const resultB = Math.floor(remainderA / b);
-        const remainderB = remainderA % b;
-
-        return {
-          resultA,
-          remainderA,
-          resultB,
-          remainderB
-        };
-      }
-
-      // const number = 150; // 변수로 지정된 숫자
-      // const a = 30; // 상수 a
-      // const b = 7; // 상수 b
-      // const number = days;
-      const numM = 30; // 상수 a
-      const numW = 7; // 상수 b
-
-      const { resultA, remainderA, resultB, remainderB } = calculateDivision(days, numM, numW);
-
-      const costM = 270000,
-        costW = 69000,
-        costD = 11000;
-
-      const totalDayCharge = resultA * costM + resultB * costW + costD * remainderB;
-      const totalDayResult = totalDayCharge.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-
-      console.log("resultA:", resultA);
-      console.log("remainderA:", remainderA);
-      console.log("resultB:", resultB);
-      console.log("remainderB:", remainderB);
-      console.log(`${totalDayCharge}원`);
-
-      const $totalDayCount = document.getElementById('totalDayCount'),
-        $totalDays = document.getElementById('totalDays'),
-        $totalDayCharge = document.getElementById('totalDayCharge');
-
-      $totalDayCount.innerText = `${days}일`;
-      $totalDays.innerText = `월(30일 기준) : ${resultA} / 주 : ${resultB} / 일 : ${remainderB}`;
-      $totalDayCharge.innerText = `${totalDayResult}원`;
     }
   </script>
 </body>
