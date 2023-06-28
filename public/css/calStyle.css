@@ -1,3 +1,10 @@
+#main.book-state .content-body {
+  overflow-x: scroll;
+}
+.book-state__box {
+  width: 100%;
+  min-width: 960px;
+}
 #stateCalendar,
 #stateCalendarSample {
   width: 100%;
