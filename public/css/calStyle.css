@@ -1,9 +1,9 @@
 #main.book-state .content-body {
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 .book-state__box {
-  width: 100%;
-  min-width: 960px;
+  /* width: 100%; */
+  /* min-width: 960px; */
 }
 #stateCalendar,
 #stateCalendarSample {
@@ -27,9 +27,10 @@
   gap: 24px;
 }
 #stateCalendarTool .wrap-title {
+  margin-bottom: 0;
   font-size: 24px;
   text-align: center;
-  margin-bottom: 0;
+  word-break: keep-all;
 }
 
 .calendar-btn__wrap {
@@ -221,4 +222,62 @@
 }
 .calendar__wrap tbody td .booked__item > .item-name {
   font-weight: 600;
+}
+
+/*** 480px ***/
+@media all and (max-width: 480px) {
+  /** MAIN > BOOK STATE page 480 **/
+  #stateCalendarTool {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .head-date__wrap {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+  #stateCalendarTool .wrap-title {
+    width: 104px;
+    font-size: 18px;
+    line-height: 30px;
+    word-break: keep-all;
+  }
+  #calToday {
+    width: 65px;
+  }
+  .calendar__wrap thead th {
+    font-size: 13px;
+  }
+  .calendar__wrap tbody td {
+    height: 85px;
+  }
+  .calendar__wrap tbody td > .date-num {
+    font-size: 13px;
+  }
+  .calendar__wrap tbody td .booked__list {
+    height: 56px;
+  }
+  .calendar__wrap tbody td:hover > .booked__list {
+    width: 160px;
+    top: 28%;
+  }
+  .calendar__wrap tbody td .booked__item {
+    padding: 1px;
+    font-size: 10px;
+  }
+  .calendar__wrap tbody td:hover .booked__item {
+    font-size: 12px;
+  }
+  .calendar__wrap tbody td .booked__item > .item-time {
+    display: none;
+  }
+  .calendar__wrap tbody td:hover .booked__item > .item-time {
+    display: flex;
+  }
+  .calender__wrap tbody td .booked__item > .item-num {
+    white-space: nowrap;
+  }
 }
