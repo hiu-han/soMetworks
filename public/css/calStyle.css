@@ -45,6 +45,7 @@
   line-height: -5px;
   cursor: pointer;
   font-size: 15px;
+  text-align: center;
   box-shadow: var(--boxshadow-s-obj);
   transition: 0.2s;
 }
@@ -237,13 +238,14 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: nowrap;
-    gap: 14px;
+    gap: 8px;
   }
   #stateCalendarTool .wrap-title {
     width: 104px;
     font-size: 18px;
     line-height: 30px;
     word-break: keep-all;
+    text-align: left;
   }
   #calToday {
     width: 65px;

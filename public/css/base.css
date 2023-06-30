@@ -70,6 +70,10 @@ body {
   width: calc(100% - 28px);
   max-width: 800px;
 }
+.wrapper.w-900 {
+  width: calc(100% - 28px);
+  max-width: 900px;
+}
 
 /** MAIN -> user pages **/
 .login__container {
@@ -763,6 +767,9 @@ body {
 /** CONTENT -> common **/
 .page-top {
   margin-bottom: 24px;
+}
+.link-page .page-top {
+  margin-bottom: 54px;
 }
 .page-title {
   font-size: 25px;
@@ -1909,7 +1916,7 @@ body {
   width: 100%;
 }
 #main.link-page .link-btn__box {
-  padding: 18px;
+  padding: 0 18px;
 }
 #main.link-page .link-btn__list {
   display: flex;
@@ -1950,7 +1957,7 @@ body {
 }
 #main.link-page .link-btn__item .txt--img {
   height: 220px;
-  margin: 14px 0 0;
+  margin: 0px 0 14px;
   background-image: url('../img/main/img-metworks.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -1960,13 +1967,27 @@ body {
   background-image: url('../img/main/img-sometworks.svg');
   background-size: 86%;
 }
-#main.link-page .link-btn__item .txt--go-link {
-  display: inline-block;
-  position: relative;
-  padding-left: 24px;
-  margin-top: 16px;
+#main.link-page .link-btn__item .txt--subs {
+  margin-top: 12px;
   font-size: 15px;
-  color: #666;
+  font-weight: 500;
+}
+#main.link-page .link-btn__item .txt--subs span {
+  display: block;
+  margin-bottom: 1px;
+  color: #616161;
+}
+#main.link-page .link-btn__item .txt--subs span:last-child {
+  margin-bottom: 0;
+}
+#main.link-page .link-btn__item .txt--go-link {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-top: 24px;
+  font-size: 15px;
+  color: #888;
+  /* text-align: right; */
 }
 #main.link-page .link-btn__item .txt--go-link::before {
   content: '';
@@ -2192,6 +2213,9 @@ body {
   }
   .page-top {
     margin-bottom: 14px;
+  }
+  .link-page .page-top {
+    margin-bottom: 24px;
   }
   .page-title {
     font-size: 22px;
