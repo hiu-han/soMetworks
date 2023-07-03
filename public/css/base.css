@@ -769,7 +769,7 @@ body {
   margin-bottom: 24px;
 }
 .link-page .page-top {
-  margin-bottom: 54px;
+  margin-bottom: 64px;
 }
 .page-title {
   font-size: 25px;
@@ -1957,7 +1957,7 @@ body {
 }
 #main.link-page .link-btn__item .txt--img {
   height: 220px;
-  margin: 0px 0 14px;
+  margin: 0px 0 22px;
   background-image: url('../img/main/img-metworks.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -1968,7 +1968,7 @@ body {
   background-size: 86%;
 }
 #main.link-page .link-btn__item .txt--subs {
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 15px;
   font-weight: 500;
 }
