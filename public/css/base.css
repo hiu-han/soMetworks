@@ -1944,7 +1944,7 @@ body {
   background-clip: content-box, border-box;
 }
 #main.link-page .link-btn__item .btn-txt__box {
-  padding: 24px;
+  padding: 24px 28px;
 }
 #main.link-page .link-btn__item .txt--name {
   font-size: 15px;
@@ -1975,7 +1975,7 @@ body {
 #main.link-page .link-btn__item .txt--subs span {
   display: block;
   margin-bottom: 1px;
-  color: #616161;
+  color: #8a8a8a;
 }
 #main.link-page .link-btn__item .txt--subs span:last-child {
   margin-bottom: 0;
@@ -1986,14 +1986,13 @@ body {
   padding-left: 26px;
   margin-top: 24px;
   font-size: 15px;
-  color: #888;
-  /* text-align: right; */
+  color: #616161;
 }
 #main.link-page .link-btn__item .txt--go-link::before {
   content: '';
   display: block;
   position: absolute;
-  top: 44%;
+  top: 46%;
   left: 0;
   transform: translateY(-50%) rotate(180deg);
   width: 18px;
