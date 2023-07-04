@@ -74,11 +74,11 @@
 
 .modal--body {
   padding-bottom: 24px;
+  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
 .modal__container.policy .modal--body {
   padding-bottom: 0;
-  border-top: 1px solid #ddd;
 }
 
 .modal--foot {
@@ -96,7 +96,6 @@
 .foot-btn__wrap .btn > a {
   padding: 0 24px;
   line-height: 3;
-  /* box-shadow: var(--boxshadow-s-obj); */
   cursor: pointer;
 }
 .foot-btn__wrap .btn.goBack > button {
@@ -117,7 +116,7 @@
 .policy-content__wrap {
   padding: 24px 14px 24px 14px;
   max-height: 65vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .policy-content__wrap .content-area {
   margin-bottom: 34px;
