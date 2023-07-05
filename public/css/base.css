@@ -906,6 +906,55 @@ body {
   font-weight: 600;
 }
 
+.content--cost-table .cost-table__wrap {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.cost-table__wrap .table--head {
+  margin-bottom: 12px;
+}
+.cost-table__wrap .table--head h6 .title--sub {
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f07c6f;
+}
+.cost-table__wrap .table--head h6 .title--main {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cost-table__wrap table {
+  width: 100%;
+}
+.cost-table__wrap table th,
+.cost-table__wrap table td {
+  font-size: 13px;
+  line-height: 2.4;
+  white-space: nowrap;
+}
+.cost-table__wrap table th {
+  font-weight: 500;
+}
+.cost-table__wrap table td {
+  padding-left: 14px;
+  padding-right: 14px;
+  text-align: right;
+}
+.cost-table__wrap thead th {
+  background-color: #d6d6d6;
+  border: 2px solid #f6f6f6;
+  line-height: 3;
+}
+.cost-table__wrap tbody th {
+  background-color: #e8e8e8;
+  border: 2px solid #f6f6f6;
+}
+.cost-table__wrap tbody td {
+  background-color: #fff;
+  border: 2px solid #f6f6f6;
+}
+
 .content--note-guide .note-guide-img__wrap {
   width: 13%;
   max-width: 120px;
@@ -1818,7 +1867,9 @@ body {
 }
 
 .book-check__container .content--body {
-  padding: 24px 0 0;
+  position: relative;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
 }
 #main.userInfo .book-check__container .content--body {
   padding: 0;
@@ -1831,11 +1882,18 @@ body {
 
 .book-check__container .seleced-info__wrap,
 .book-check__container .cost-info__wrap {
-  padding: 24px 0px;
-  border-bottom: 1px solid #ddd;
+  /* padding: 24px 0px; */
+  /* border-bottom: 1px solid #ddd; */
 }
 .book-check__container .seleced-info__wrap {
-  padding-top: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+.book-check__container .cost-info__wrap {
+  padding-top: 24px;
+}
+.book-check__container .seleced-info__wrap {
+  /* padding-top: 0; */
 }
 .book-check__container .booked-info__list {
   padding: 0 20px;
@@ -1851,7 +1909,7 @@ body {
 }
 .booked-info__item .item--name {
   font-size: 16px;
-  color: #7d7d81;
+  color: #8a8a8a;
 }
 .booked-info__item .item--num {
   font-size: 16px;
@@ -1882,7 +1940,8 @@ body {
 }
 #main.history .content--head {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  position: relative;
 }
 .content--head .booked-date {
   font-size: 20px;
