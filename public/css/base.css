@@ -2063,6 +2063,7 @@ body {
   background-clip: content-box, border-box;
 }
 #main.link-page .link-btn__item .btn-txt__box {
+  position: relative;
   padding: 18px;
 }
 #main.link-page .link-btn__item .btn-txt__box > p {
@@ -2343,9 +2344,6 @@ body {
   .page-top {
     margin-bottom: 14px;
   }
-  .link-page .page-top {
-    margin-bottom: 24px;
-  }
   .page-title {
     font-size: 22px;
   }
@@ -2407,6 +2405,11 @@ body {
   .banner__item .banner__btn {
     text-align: right;
   }
+  .banner__item .banner__btn > a {
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 2.5;
+  }
 
   .content--space-slider .content--head > .txt-info {
     font-size: 16px;
@@ -2443,16 +2446,29 @@ body {
   .content--space-inform {
     padding: 40px 0;
   }
+  .content--space-inform.diversity .content--body__box {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .content--space-inform.diversity .inform-txt__wrap {
+    width: calc(86vw - 14px);
+    width: 86vw;
+  }
   .inform__txt .txt--strong {
     margin-bottom: 8px;
-    font-size: 24px;
+    font-size: 20px;
+  }
+  .content--space-inform .inform__btn > a {
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 2.5;
   }
 
   .content--metworks-strength .content--head {
     margin-bottom: 34px;
   }
   .content--metworks-strength .section-title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .content--metworks-strength .strength-icon__list {
     justify-content: flex-start;
@@ -2474,14 +2490,27 @@ body {
     font-size: 10px;
   }
 
+  .content--metworks-contact .section-title {
+    font-size: 22px;
+  }
   .content--metworks-contact .contact--address {
     font-size: 16px;
   }
   .contact--map {
     height: 84vw;
   }
+  .content--metworks-contact .contact__item.subway .item--name {
+    width: 70px;
+    font-size: 13px;
+    line-height: 2;
+    white-space: nowrap;
+  }
 
-  /** MAIN > MAIN page 480 **/
+  .banner__item .banner__btn > a {
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 2.5;
+  }
   .content--space-info .section-content .content--body__box {
     flex-direction: column;
     flex-wrap: unset;
@@ -2707,27 +2736,83 @@ body {
   /** MAIN > BOOKED INFO page 480 **/
 
   /** MAIN -> LINK page **/
+  #main.link-page {
+    justify-content: flex-start;
+  }
+  #main.link-page .wrapper {
+    padding: 36px 24px;
+  }
+  .link-page .page-top {
+    margin: 0px 0 24px;
+  }
   #main.link-page .page-title.logo {
     width: 180px;
   }
   #main.link-page .link-btn__box {
-    padding: 18px 0;
+    /* padding: 18px 0; */
+  }
+  #main.link-page .link-btn__box {
+    padding: 0;
   }
   #main.link-page .link-btn__list {
     flex-wrap: wrap;
     gap: 24px;
   }
+  #main.link-page .link-btn__item {
+    width: 100%;
+    overflow: hidden;
+  }
   #main.link-page .link-btn__item .btn-txt__box {
-    padding: 18px;
+    padding: 26px;
+    /* height: 410px; */
+    height: 340px;
+  }
+  #main.link-page .link-btn__item .btn-txt__box > p {
+    text-align: left;
   }
   #main.link-page .link-btn__item .txt--title {
-    font-size: 20px;
+    position: relative;
+    font-size: 22px;
+    z-index: 100;
+  }
+  #main.link-page .link-btn__item .txt--subs {
+    position: relative;
+    margin-top: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 100;
+  }
+  #main.link-page .link-btn__item .txt--subs span {
+    margin-bottom: 2px;
   }
   #main.link-page .link-btn__item .txt--img {
-    display: none;
+    position: absolute;
+    bottom: 14%;
+    bottom: 8%;
+    right: 20px;
+    width: 76%;
+    width: 62%;
+    margin: 0;
+    z-index: 50;
   }
-  #main.link-page .link-btn__item .txt--go-link {
-    margin-top: 10px;
+  #main.link-page .link-btn__item.sometworks .txt--img {
+    bottom: 14%;
+    bottom: 6%;
+    right: 10px;
+    /* width: 80%; */
+    width: 65%;
+  }
+  #main.link-page .link-btn__item .btn-txt__box > .txt--go-link {
+    position: absolute;
+    bottom: 26px;
+    left: 26px;
+    padding: 0 15px;
+    margin-top: 0px;
+    border-radius: 40px;
+    border: 1px solid #616161;
+    font-size: 14px;
+    color: #313131;
+    line-height: 2.4;
   }
 }
 
