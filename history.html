@@ -33,6 +33,16 @@
         <section class="page-top">
           <div class="section__inner">
             <h3 class="page-title">예약내역</h3>
+            <div class="page-options">
+              <div class="select__wrap select--book-state">
+                <select name="" id="bookStateSelect">
+                  <option value="">전체</option>
+                  <option value="">예약 완료</option>
+                  <option value="">예약 취소</option>
+                  <option value="">이용 완료</option>
+                </select>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -251,6 +261,9 @@
                             <span class="num--time"><em class="start">10:00</em>~<em class="end">15:00</em></span>
                           </li>
                         </ul>
+                        <p class="btn list-open--btn">
+                          <button>더 보기</button>
+                        </p>
                       </li>
                       <li class="booked-info__item selectedOption">
                         <span class="item--name">장비 대여 및 옵션</span>

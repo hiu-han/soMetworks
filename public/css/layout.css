@@ -346,6 +346,9 @@ footer .logo .txt--regular {
   header {
     height: 54px;
   }
+  .header__inner {
+    padding: 0 18px;
+  }
   .logo .txt--strong {
     font-size: 22px;
   }

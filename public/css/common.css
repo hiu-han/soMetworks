@@ -166,6 +166,8 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
   background-size: 11px;
 }
 .select__wrap select:focus {
+  border: 1px solid #999;
+  outline: none;
   background-image: url('../img/icon/icon-select-focus.svg');
   background-position: 89% 49%;
 }

@@ -1935,6 +1935,11 @@ body {
 .book-check__container .booked-info__item:last-child {
   margin-bottom: 0;
 }
+.book-check__container .booked-info__item.useWhen {
+  position: relative;
+  max-height: unset;
+  max-height: 166px;
+}
 .booked-info__item * {
   font-variant-numeric: tabular-nums;
 }
@@ -1945,8 +1950,6 @@ body {
 }
 .booked-info__item .item--num__list {
   background-color: lightblue;
-  max-height: unset;
-  max-height: 186px;
   overflow: hidden;
 }
 .booked-info__item .item--num {
@@ -1959,6 +1962,19 @@ body {
 }
 .booked-info__item .item--num > .num--date {
   margin-right: 4px;
+}
+.booked-info__item .list-open--btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.booked-info__item .list-open--btn > button {
+  width: 100%;
+  border: 1px solid #313131;
+  background-color: #fff;
+  font-size: 13px;
+  line-height: 2.8;
 }
 
 .book-check__container .content--foot {
@@ -1992,6 +2008,17 @@ body {
 }
 
 /** MAIN -> history page **/
+#main.history .page-top .section__inner {
+  display: flex;
+  justify-content: space-between;
+}
+#main.history .page-top .select__wrap select {
+  border: none;
+  box-shadow: var(--boxshadow-s-obj);
+}
+#main.history .page-top .select__wrap select:focus {
+  border: none;
+}
 #main.history .book-check__container {
   margin-bottom: 24px;
 }
@@ -2337,6 +2364,10 @@ body {
   /** MAIN > COMMON 480 **/
   #main {
     padding-top: 34px;
+  }
+  .wrapper,
+  .center {
+    padding: 0 18px;
   }
   .content--head {
     margin-bottom: 18px;
