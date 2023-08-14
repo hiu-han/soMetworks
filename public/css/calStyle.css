@@ -223,6 +223,17 @@
 }
 .calendar__wrap tbody td .booked__item > .item-name {
   font-weight: 600;
+  white-space: nowrap;
+}
+
+/*** 768px ***/
+@media all and (max-width: 768px) {
+  .calendar__wrap tbody td:hover > .booked__list {
+    width: 140%;
+  }
+  .calendar__wrap tbody td:hover .booked__item {
+    padding-left: 4px;
+  }
 }
 
 /*** 480px ***/
