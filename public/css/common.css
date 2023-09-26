@@ -21,6 +21,10 @@ strong {
 }
 
 /** COMMON -> BTN **/
+.btn > button {
+  border: none;
+  background-color: transparent;
+}
 .btn > button,
 .btn > a {
   cursor: pointer;
@@ -123,9 +127,6 @@ input[type='date']:hover::-webkit-calendar-picker-indicator {
   display: inline-block;
   width: calc(50% - 4px);
 }
-/* .input-item.halfWidth:nth-of-type(odd) {
-  margin-right: 8px;
-} */
 .input-item.job.halfWidth {
   margin-right: 8px;
   margin-bottom: 0;

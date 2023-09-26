@@ -343,6 +343,7 @@ footer .logo .txt--regular {
 
 /*** 480px ***/
 @media all and (max-width: 480px) {
+  /** HEADER **/
   header {
     height: 54px;
   }
@@ -363,5 +364,13 @@ footer .logo .txt--regular {
   }
   #primary-menu > .gnb__item > a {
     line-height: 54px;
+  }
+
+  /** FOOTER 480 **/
+  .footer__inner {
+    padding: 30px 20px;
+  }
+  .addr__list {
+    gap: 2px 18px;
   }
 }

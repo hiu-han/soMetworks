@@ -34,6 +34,9 @@
   background-color: #fff;
   box-shadow: var(--boxshadow-l-obj);
 }
+#modalCostWzone .modal__box {
+  width: 520px;
+}
 .modal__inner {
   position: relative;
   width: 100%;
@@ -46,6 +49,15 @@
   margin-bottom: 6px;
   font-size: 22px;
   font-weight: 700;
+}
+.modal--head .modal-title + .title-info {
+  width: 94%;
+  margin-top: 12px;
+}
+.modal--head .modal-title + .title-info .info--txt {
+  color: #375c81;
+  line-height: 1.4;
+  word-break: keep-all;
 }
 .modal--head .modal-sub-title {
   font-size: 14px;
@@ -73,6 +85,13 @@
   padding-bottom: 24px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+}
+#modalCostWzone .modal--head {
+  margin-bottom: 14px;
+}
+#modalCostWzone .modal--body {
+  border-top: none;
+  border-bottom: none;
 }
 .modal__container.policy .modal--body {
   padding-bottom: 0;
@@ -223,6 +242,12 @@
   font-size: 17px;
   font-weight: 600;
   color: var(--font-c-info);
+}
+
+/** MODAL -> timetable **/
+.modal__container .cost-table__wrap table th,
+.modal__container .cost-table__wrap table td {
+  font-size: 15px;
 }
 
 @media all and (max-width: 1048px) {

@@ -897,6 +897,9 @@ body {
 .book-guide__item {
   margin-bottom: 12px;
 }
+.book-guide__item:last-child {
+  margin-bottom: 0;
+}
 .book-guide__item > span {
   display: inline-block;
   font-size: 16px;
@@ -923,7 +926,7 @@ body {
   color: #f07c6f;
 }
 .cost-table__wrap .table--head h6 .title--main {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 .cost-table__wrap .table--head h6 .title--subs {
@@ -931,6 +934,7 @@ body {
   font-size: 14px;
   color: #515151;
   line-height: 1.4;
+  word-break: keep-all;
 }
 .cost-table__wrap table {
   width: 100%;
@@ -2367,7 +2371,7 @@ body {
   }
   .wrapper,
   .center {
-    padding: 0 18px;
+    padding: 0 14px;
   }
   .content--head {
     margin-bottom: 18px;
@@ -2376,7 +2380,7 @@ body {
     margin-bottom: 14px;
   }
   .page-title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .content--head .content-title {
     margin-bottom: 14px;
@@ -2589,8 +2593,8 @@ body {
     position: relative;
     display: block;
     flex-wrap: unset;
-    padding: 20px 20px;
-    border-radius: 24px;
+    padding: 16px 16px;
+    border-radius: 20px;
   }
   .content--use-guide .book-process__wrap {
     position: relative;
@@ -2600,8 +2604,9 @@ body {
     padding-left: 0;
   }
   .content--use-guide .content--body__box .process__item {
-    padding: 14px 18px;
+    padding: 10px 14px;
     border-radius: 14px;
+    margin-bottom: 20px;
   }
   .content--use-guide .content--body__box .process__item.process--01,
   .content--use-guide .content--body__box .process__item.process--02 {
@@ -2614,8 +2619,11 @@ body {
     font-size: 16px;
   }
   .content--use-guide .process__item.process--03 .process--icon {
-    left: 94%;
-    bottom: 50%;
+    left: 90%;
+    bottom: 60%;
+    padding: 0 10px;
+    font-size: 15px;
+    line-height: 30px;
   }
   .content--use-guide .book-process-img__wrap {
     position: absolute;
@@ -2650,14 +2658,32 @@ body {
     font-size: 14px;
   }
 
+  .cost-table__wrap .cost-table {
+    width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+  }
+  .cost-table__wrap table thead th,
+  .cost-table__wrap table tbody td,
+  .cost-table__wrap table tbody td {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
   .business-addr__wrap .subs-title {
     font-size: 16px;
+  }
+  .business-addr__wrap .subs__list {
+    padding-left: 18px;
   }
   .business-addr__wrap .subs__item {
     font-size: 14px;
   }
   .business-addr__wrap .sub__list.table {
     width: 100%;
+  }
+  .business-addr__wrap .sub__list.table .sub__item > .item--name {
+    padding-left: 10px;
   }
 
   .note-guide__item {
