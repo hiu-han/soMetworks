@@ -857,17 +857,22 @@ body {
 .content--use-guide .content--body__box .process__item.process--02 {
   margin-left: 40px;
 }
-.content--use-guide .process__item .process--num {
+.content--use-guide .process__item > span {
   display: inline-block;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-.content--use-guide .process__item .process--txt {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 500;
   vertical-align: middle;
   white-space: nowrap;
+}
+.content--use-guide .process__item .process--num {
+  margin-right: 6px;
+}
+.content--use-guide .process__item .process--step {
+  margin-right: 4px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.content--use-guide .process__item .process--txt {
+  font-size: 18px;
+  font-weight: 500;
 }
 .content--use-guide .process__item.process--03 .process--txt {
   font-weight: 700;
@@ -2616,6 +2621,10 @@ body {
     padding-right: 24px;
   }
   .content--use-guide .process__item .process--txt {
+    font-size: 16px;
+  }
+  .content--use-guide .process__item .process--step {
+    margin-right: 4px;
     font-size: 16px;
   }
   .content--use-guide .process__item.process--03 .process--icon {
