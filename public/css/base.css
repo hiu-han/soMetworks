@@ -1933,7 +1933,10 @@ body {
   padding-top: 18px;
 }
 .book-check__container .booked-info__list {
-  padding: 0 20px;
+  padding: 14px;
+  border-radius: 14px;
+  background-color: #f6f6f6;
+  /* padding: 0 20px; */
 }
 .book-check__container .booked-info__item {
   display: flex;
@@ -1946,15 +1949,20 @@ body {
 }
 .book-check__container .booked-info__item.useWhen {
   position: relative;
+  width: calc(100% + 8px);
+}
+.book-check__container .booked-info__item.useWhen .info-sub__list {
   max-height: unset;
   max-height: 166px;
+  padding-right: 8px;
+  overflow-y: scroll;
 }
 .booked-info__item * {
   font-variant-numeric: tabular-nums;
 }
 .booked-info__item .item--name {
   font-size: 15px;
-  color: #8a8a8a;
+  color: #6a6a6a;
   vertical-align: bottom;
 }
 .booked-info__item .item--num__list {
